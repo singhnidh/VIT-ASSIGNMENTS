@@ -1,0 +1,1089 @@
+
+SQL> select abs(-65) from dual;
+
+  ABS(-65)
+----------
+        65
+
+SQL> select ceil(balance) "ceil(88.9)" from account where balance between 500 an
+  2  d 20000;
+select ceil(balance) "ceil(88.9)" from account where balance between 500 an
+                                                                         *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> select ceil(balance) "ceil(88.9)" from account where balance between 500 and 20000;
+
+ceil(88.9)
+----------
+       945
+
+SQL> select mod(200,30) from dual;
+
+MOD(200,30)
+-----------
+         20
+
+SQL> select balance, power(balance,2) from account where account_no='1008';
+
+   BALANCE POWER(BALANCE,2)
+---------- ----------------
+    188685       3.5602E+10
+
+SQL> select balance-1500, sign(balance-1500) from account where account_no='1002';
+
+no rows selected
+
+SQL> select balance-1500, sign(balance-1500) from account where account_no='1003';
+
+BALANCE-1500 SIGN(BALANCE-1500)
+------------ ------------------
+   3003266.1                  1
+
+SQL> select balance, sqrt(balance) from account where account_no='1003';
+
+   BALANCE SQRT(BALANCE)
+---------- -------------
+ 3004766.1    1733.42612
+
+SQL> select balance, trunc(sqrt(balance),2), trunc(sqrt(balance)), trunc(sqrt(balance),-2) from account where branch_name='pnb';
+
+   BALANCE TRUNC(SQRT(BALANCE),2) TRUNC(SQRT(BALANCE)) TRUNC(SQRT(BALANCE),-2)
+---------- ---------------------- -------------------- -----------------------
+ 3004766.1                1733.42                 1733                    1700
+
+SQL> select balance, round(sqrt(balance),2), round(sqrt(balance),-2), round(sqrt(balance)) from account where branch_name='pnb';
+
+   BALANCE ROUND(SQRT(BALANCE),2) ROUND(SQRT(BALANCE),-2) ROUND(SQRT(BALANCE))
+---------- ---------------------- ----------------------- --------------------
+ 3004766.1                1733.43                    1700                 1733
+
+SQL> select exp(4) from dual;
+
+    EXP(4)
+----------
+  54.59815
+
+SQL> select chr(37)a, chr(100) b,chr(101) c from dual;
+
+A B C
+- - -
+% d e
+
+SQL> select concat('sachin','tendulkar') from dual;
+
+CONCAT('SACHIN'
+---------------
+sachintendulkar
+
+SQL> select concat(customer_name,customer_city) from customer;
+
+CONCAT(CUSTOMER_NAME,CUSTOMER_CITY)
+--------------------------------------------------
+i                   a
+nidhi singh         varanasi
+neha singh          mirzapur
+nilu singh          mirzapur
+shishir singh       varanasi
+shivani             bhuj
+ayantika            bengal
+shreya              haridwar
+vivek               lala chauk
+vaibhav             prayagraj
+annu                lucknow
+
+CONCAT(CUSTOMER_NAME,CUSTOMER_CITY)
+--------------------------------------------------
+ishu                varanasi
+divya pathak        sahajajapur
+saket               balia
+janhavi             mumbai
+ayat ibrahim khan   mumbai
+yashodhara          assam
+
+17 rows selected.
+
+SQL> select initcap(customer_name) from customer;
+
+INITCAP(CUSTOMER_NAM
+--------------------
+Annu
+Ayantika
+Ayat Ibrahim Khan
+Divya Pathak
+I
+Ishu
+Janhavi
+Neha Singh
+Nidhi Singh
+Nilu Singh
+Saket
+
+INITCAP(CUSTOMER_NAM
+--------------------
+Shishir Singh
+Shivani
+Shreya
+Vaibhav
+Vivek
+Yashodhara
+
+17 rows selected.
+
+SQL> select lower(customer_name),initcap(customer_name) from customer;
+
+LOWER(CUSTOMER_NAME) INITCAP(CUSTOMER_NAM
+-------------------- --------------------
+annu                 Annu
+ayantika             Ayantika
+ayat ibrahim khan    Ayat Ibrahim Khan
+divya pathak         Divya Pathak
+i                    I
+ishu                 Ishu
+janhavi              Janhavi
+neha singh           Neha Singh
+nidhi singh          Nidhi Singh
+nilu singh           Nilu Singh
+saket                Saket
+
+LOWER(CUSTOMER_NAME) INITCAP(CUSTOMER_NAM
+-------------------- --------------------
+shishir singh        Shishir Singh
+shivani              Shivani
+shreya               Shreya
+vaibhav              Vaibhav
+vivek                Vivek
+yashodhara           Yashodhara
+
+17 rows selected.
+
+SQL> select upper(customer_name), lower(customer_name), initcap (customer_name)from customer;
+
+UPPER(CUSTOMER_NAME) LOWER(CUSTOMER_NAME) INITCAP(CUSTOMER_NAM
+-------------------- -------------------- --------------------
+ANNU                 annu                 Annu
+AYANTIKA             ayantika             Ayantika
+AYAT IBRAHIM KHAN    ayat ibrahim khan    Ayat Ibrahim Khan
+DIVYA PATHAK         divya pathak         Divya Pathak
+I                    i                    I
+ISHU                 ishu                 Ishu
+JANHAVI              janhavi              Janhavi
+NEHA SINGH           neha singh           Neha Singh
+NIDHI SINGH          nidhi singh          Nidhi Singh
+NILU SINGH           nilu singh           Nilu Singh
+SAKET                saket                Saket
+
+UPPER(CUSTOMER_NAME) LOWER(CUSTOMER_NAME) INITCAP(CUSTOMER_NAM
+-------------------- -------------------- --------------------
+SHISHIR SINGH        shishir singh        Shishir Singh
+SHIVANI              shivani              Shivani
+SHREYA               shreya               Shreya
+VAIBHAV              vaibhav              Vaibhav
+VIVEK                vivek                Vivek
+YASHODHARA           yashodhara           Yashodhara
+
+17 rows selected.
+
+SQL> select balance, lpad(balance,10,'$') from account where branch_name='iob';
+
+   BALANCE LPAD(BALANCE,10,'$')
+---------- ----------------------------------------
+ 1669166.1 $1669166.1
+
+SQL> select balance, lpad(balance,10,'$'), rpad(balance,10,'$') from account where branch_name='iob';
+
+   BALANCE LPAD(BALANCE,10,'$')
+---------- ----------------------------------------
+RPAD(BALANCE,10,'$')
+----------------------------------------
+ 1669166.1 $1669166.1
+1669166.1$
+
+
+SQL> select customer_name, ltrim(customer_name), ltrim(customer_name,'r') from customer;
+
+CUSTOMER_NAME        LTRIM(CUSTOMER_NAME) LTRIM(CUSTOMER_NAME,
+-------------------- -------------------- --------------------
+annu                 annu                 annu
+ayantika             ayantika             ayantika
+ayat ibrahim khan    ayat ibrahim khan    ayat ibrahim khan
+divya pathak         divya pathak         divya pathak
+i                    i                    i
+ishu                 ishu                 ishu
+janhavi              janhavi              janhavi
+neha singh           neha singh           neha singh
+nidhi singh          nidhi singh          nidhi singh
+nilu singh           nilu singh           nilu singh
+saket                saket                saket
+
+CUSTOMER_NAME        LTRIM(CUSTOMER_NAME) LTRIM(CUSTOMER_NAME,
+-------------------- -------------------- --------------------
+shishir singh        shishir singh        shishir singh
+shivani              shivani              shivani
+shreya               shreya               shreya
+vaibhav              vaibhav              vaibhav
+vivek                vivek                vivek
+yashodhara           yashodhara           yashodhara
+
+17 rows selected.
+
+SQL> select customer_name, rtrim(customer_name), rtrim(customer_name,'m') from customer;
+
+CUSTOMER_NAME        RTRIM(CUSTOMER_NAME) RTRIM(CUSTOMER_NAME,
+-------------------- -------------------- --------------------
+annu                 annu                 annu
+ayantika             ayantika             ayantika
+ayat ibrahim khan    ayat ibrahim khan    ayat ibrahim khan
+divya pathak         divya pathak         divya pathak
+i                    i                    i
+ishu                 ishu                 ishu
+janhavi              janhavi              janhavi
+neha singh           neha singh           neha singh
+nidhi singh          nidhi singh          nidhi singh
+nilu singh           nilu singh           nilu singh
+saket                saket                saket
+
+CUSTOMER_NAME        RTRIM(CUSTOMER_NAME) RTRIM(CUSTOMER_NAME,
+-------------------- -------------------- --------------------
+shishir singh        shishir singh        shishir singh
+shivani              shivani              shivani
+shreya               shreya               shreya
+vaibhav              vaibhav              vaibhav
+vivek                vivek                vivek
+yashodhara           yashodhara           yashodhara
+
+17 rows selected.
+
+SQL> select customer_name,replace(customer_name,'e','x') from customer;
+
+CUSTOMER_NAME        REPLACE(CUSTOMER_NAM
+-------------------- --------------------
+annu                 annu
+ayantika             ayantika
+ayat ibrahim khan    ayat ibrahim khan
+divya pathak         divya pathak
+i                    i
+ishu                 ishu
+janhavi              janhavi
+neha singh           nxha singh
+nidhi singh          nidhi singh
+nilu singh           nilu singh
+saket                sakxt
+
+CUSTOMER_NAME        REPLACE(CUSTOMER_NAM
+-------------------- --------------------
+shishir singh        shishir singh
+shivani              shivani
+shreya               shrxya
+vaibhav              vaibhav
+vivek                vivxk
+yashodhara           yashodhara
+
+17 rows selected.
+
+SQL> select customer_name, substr(customer_name,2,4),substr(customer_name,4) from customer;
+
+CUSTOMER_NAME        SUBSTR(CUSTOMER_
+-------------------- ----------------
+SUBSTR(CUSTOMER_NAME,4)
+--------------------------------------------------------------------
+annu                 nnu
+u
+
+ayantika             yant
+ntika
+
+ayat ibrahim khan    yat
+t ibrahim khan
+
+
+CUSTOMER_NAME        SUBSTR(CUSTOMER_
+-------------------- ----------------
+SUBSTR(CUSTOMER_NAME,4)
+--------------------------------------------------------------------
+divya pathak         ivya
+ya pathak
+
+i
+
+
+ishu                 shu
+u
+
+
+CUSTOMER_NAME        SUBSTR(CUSTOMER_
+-------------------- ----------------
+SUBSTR(CUSTOMER_NAME,4)
+--------------------------------------------------------------------
+janhavi              anha
+havi
+
+neha singh           eha
+a singh
+
+nidhi singh          idhi
+hi singh
+
+
+CUSTOMER_NAME        SUBSTR(CUSTOMER_
+-------------------- ----------------
+SUBSTR(CUSTOMER_NAME,4)
+--------------------------------------------------------------------
+nilu singh           ilu
+u singh
+
+saket                aket
+et
+
+shishir singh        hish
+shir singh
+
+
+CUSTOMER_NAME        SUBSTR(CUSTOMER_
+-------------------- ----------------
+SUBSTR(CUSTOMER_NAME,4)
+--------------------------------------------------------------------
+shivani              hiva
+vani
+
+shreya               hrey
+eya
+
+vaibhav              aibh
+bhav
+
+
+CUSTOMER_NAME        SUBSTR(CUSTOMER_
+-------------------- ----------------
+SUBSTR(CUSTOMER_NAME,4)
+--------------------------------------------------------------------
+vivek                ivek
+ek
+
+yashodhara           asho
+hodhara
+
+
+17 rows selected.
+
+SQL> select translate('abcdefghij','abcdef','12345') from dual;
+
+TRANSLATE
+---------
+12345ghij
+
+SQL> select translate('abcd','abcd','1') from dual;
+
+T
+-
+1
+
+SQL> select customer_name, translate(customer_name,'e',1) from customer;
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E',1)
+--------------------------------------------------------------------------------
+annu
+annu
+
+ayantika
+ayantika
+
+ayat ibrahim khan
+ayat ibrahim khan
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E',1)
+--------------------------------------------------------------------------------
+divya pathak
+divya pathak
+
+i
+i
+
+ishu
+ishu
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E',1)
+--------------------------------------------------------------------------------
+janhavi
+janhavi
+
+neha singh
+n1ha singh
+
+nidhi singh
+nidhi singh
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E',1)
+--------------------------------------------------------------------------------
+nilu singh
+nilu singh
+
+saket
+sak1t
+
+shishir singh
+shishir singh
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E',1)
+--------------------------------------------------------------------------------
+shivani
+shivani
+
+shreya
+shr1ya
+
+vaibhav
+vaibhav
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E',1)
+--------------------------------------------------------------------------------
+vivek
+viv1k
+
+yashodhara
+yashodhara
+
+
+17 rows selected.
+
+SQL> select customer_name, soundex(customer_name) from customer;
+
+CUSTOMER_NAME        SOUN
+-------------------- ----
+annu                 A500
+ayantika             A532
+ayat ibrahim khan    A316
+divya pathak         D113
+i                    I000
+ishu                 I200
+janhavi              J510
+neha singh           N252
+nidhi singh          N325
+nilu singh           N425
+saket                S230
+
+CUSTOMER_NAME        SOUN
+-------------------- ----
+shishir singh        S262
+shivani              S150
+shreya               S600
+vaibhav              V110
+vivek                V120
+yashodhara           Y236
+
+17 rows selected.
+
+SQL> select ascii('a') from dual;
+
+ASCII('A')
+----------
+        97
+
+SQL> select ascii('b') from dual;
+
+ASCII('B')
+----------
+        98
+
+SQL> select customer_name,instr(customer_name,'e') from customer;
+
+CUSTOMER_NAME        INSTR(CUSTOMER_NAME,'E')
+-------------------- ------------------------
+annu                                        0
+ayantika                                    0
+ayat ibrahim khan                           0
+divya pathak                                0
+i                                           0
+ishu                                        0
+janhavi                                     0
+neha singh                                  2
+nidhi singh                                 0
+nilu singh                                  0
+saket                                       4
+
+CUSTOMER_NAME        INSTR(CUSTOMER_NAME,'E')
+-------------------- ------------------------
+shishir singh                               0
+shivani                                     0
+shreya                                      4
+vaibhav                                     0
+vivek                                       4
+yashodhara                                  0
+
+17 rows selected.
+
+SQL> select instrb('corporate floor','or',5,2) from dual;
+
+INSTRB('CORPORATEFLOOR','OR',5,2)
+---------------------------------
+                               14
+
+SQL> select customer_name,length(customer_name) from customer;
+
+CUSTOMER_NAME        LENGTH(CUSTOMER_NAME)
+-------------------- ---------------------
+annu                                    20
+ayantika                                20
+ayat ibrahim khan                       20
+divya pathak                            20
+i                                       20
+ishu                                    20
+janhavi                                 20
+neha singh                              20
+nidhi singh                             20
+nilu singh                              20
+saket                                   20
+
+CUSTOMER_NAME        LENGTH(CUSTOMER_NAME)
+-------------------- ---------------------
+shishir singh                           20
+shivani                                 20
+shreya                                  20
+vaibhav                                 20
+vivek                                   20
+yashodhara                              20
+
+17 rows selected.
+
+SQL> select sysdate from dual;
+
+SYSDATE
+---------
+16-MAY-23
+
+SQL> select add_months('30jan08',5) from dual;
+
+ADD_MONTH
+---------
+30-JUN-08
+
+SQL> select round(to_date('12jan08'),'mm') from dual;
+
+ROUND(TO_
+---------
+01-JAN-08
+
+SQL> select trunc(to_date('27-oct-08','dd-mm-yy'),'year') from dual;
+
+TRUNC(TO_
+---------
+01-JAN-08
+
+SQL> select months_between('12jan08','12jan09') from dual;
+
+MONTHS_BETWEEN('12JAN08','12JAN09')
+-----------------------------------
+                                -12
+
+SQL> select sysdate,last_day(sysdate) from dual;
+
+SYSDATE   LAST_DAY(
+--------- ---------
+16-MAY-23 31-MAY-23
+
+SQL> select sysdate,next_day(sysdate,'wednesday') from dual;
+
+SYSDATE   NEXT_DAY(
+--------- ---------
+16-MAY-23 17-MAY-23
+
+SQL> select sysdate,to_char(sysdate,'day') from dual;
+
+SYSDATE   TO_CHAR(SYSDATE,'DAY')
+--------- ------------------------------------
+16-MAY-23 tuesday
+
+SQL> select to_char(to_date('12jan08'),'rm') from dual;
+
+TO_C
+----
+i
+
+SQL> select greatest(10,'7',-1) from dual;
+
+GREATEST(10,'7',-1)
+-------------------
+                 10
+
+SQL> select least('abcd','abcd','a','xyz') from dual;
+
+L
+-
+a
+
+SQL> select account_no,balance+100,nvl(balance+100,0) from account where branch_name='sbi';
+
+no rows selected
+
+SQL> select customer_name, translate(customer_name,'e','1') from customer;
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E','1')
+--------------------------------------------------------------------------------
+annu
+annu
+
+ayantika
+ayantika
+
+ayat ibrahim khan
+ayat ibrahim khan
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E','1')
+--------------------------------------------------------------------------------
+divya pathak
+divya pathak
+
+i
+i
+
+ishu
+ishu
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E','1')
+--------------------------------------------------------------------------------
+janhavi
+janhavi
+
+neha singh
+n1ha singh
+
+nidhi singh
+nidhi singh
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E','1')
+--------------------------------------------------------------------------------
+nilu singh
+nilu singh
+
+saket
+sak1t
+
+shishir singh
+shishir singh
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E','1')
+--------------------------------------------------------------------------------
+shivani
+shivani
+
+shreya
+shr1ya
+
+vaibhav
+vaibhav
+
+
+CUSTOMER_NAME
+--------------------
+TRANSLATE(CUSTOMER_NAME,'E','1')
+--------------------------------------------------------------------------------
+vivek
+viv1k
+
+yashodhara
+yashodhara
+
+
+17 rows selected.
+
+SQL> select branch_name,branch_city,decode(branch_city,'mumbai','usa','delhi','uk',branch_city) from branch;
+
+BRANCH_NAME     BRANCH_CITY                    DECODE(BRANCH_CITY,'MUMBAI','U
+--------------- ------------------------------ ------------------------------
+pnb             mirzapur                       mirzapur
+iob             mumbai                         mumbai
+icc             sahajahapur                    sahajahapur
+kvb             bengal                         bengal
+icici           haridwar                       haridwar
+hdfc            varanasi                       varanasi
+hsbc            bhuj                           bhuj
+
+7 rows selected.
+
+SQL> select uid from dual;
+
+       UID
+----------
+         9
+
+SQL> select uid,user,userenv('language') from dual;
+
+       UID
+----------
+USER
+--------------------------------------------------------------------------------
+USERENV('LANGUAGE')
+----------------------------------------------------
+         9
+SYSTEM
+AMERICAN_AMERICA.AL32UTF8
+
+
+SQL> create table temp1 as select * from emp;
+create table temp1 as select * from emp
+                                    *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> desc emp;
+ERROR:
+ORA-04043: object emp does not exist
+
+
+SQL>
+
+SQL> create table temp1 as select *from emp;
+
+Table created.
+
+SQL> select *from emp where empno=7788;
+
+     EMPNO ENAME                JOB                         MGR HIREDATE
+---------- -------------------- -------------------- ---------- ---------
+       SAL       COMM     DEPTNO
+---------- ---------- ----------
+      7788 scott                analyst                    7566 09-DEC-82
+      3000         20
+
+
+SQL> set serveroutput on;
+SQL> ed
+Wrote file afiedt.buf
+
+  1  1 DECLARE
+  2  2 x NUMBER(7,2);
+  3  3 BEGIN
+  4  4 SELECT sal INTO x FROM emp WHERE empno = 7788;
+  5  5 IF x <= 3000 THEN UPDATE emp SET sal = 3050 WHERE empno = 7788;
+  6  6 END IF;
+  7  7 dbms_output.put_line('UPDATE is done sucessfully');
+  8* 8* END;
+SQL> /
+1 DECLARE
+*
+ERROR at line 1:
+ORA-00900: invalid SQL statement
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  x NUMBER(7,2);
+  3  BEGIN
+  4  SELECT sal INTO x FROM emp WHERE empno = 7788;
+  5  IF x <= 3000 THEN UPDATE emp SET sal = 3050 WHERE empno = 7788;
+  6  END IF;
+  7  dbms_output.put_line('UPDATE is done sucessfully');
+  8* END;
+  9  /
+UPDATE is done sucessfully
+
+PL/SQL procedure successfully completed.
+
+SQL> select *from emp where empno=7788;
+
+     EMPNO ENAME                JOB                         MGR HIREDATE
+---------- -------------------- -------------------- ---------- ---------
+       SAL       COMM     DEPTNO
+---------- ---------- ----------
+      7788 scott                analyst                    7566 09-DEC-82
+      3050         20
+
+
+SQL> create table temp1 as select * from emp;
+create table temp1 as select * from emp
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> delete temp1;
+
+14 rows deleted.
+
+SQL> desc temp1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(12,2)
+ ENAME                                              VARCHAR2(20)
+ JOB                                                VARCHAR2(20)
+ MGR                                                NUMBER(12,2)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(12,2)
+ COMM                                               NUMBER(12,2)
+ DEPTNO                                             NUMBER(12,2)
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  nr emp%ROWTYPE;
+  3  BEGIN
+  4  SELECT * INTO nr FROM emp WHERE empno=7698;
+  5  INSERT INTO temp1 VALUES (nr.empno, nr.ename, nr.job, nr.mgr, nr.hiredate,
+  6  nr.sal, nr.comm, nr.deptno);
+  7  dbms_output.put_line(' INSERT completed succefully');
+  8* END;
+SQL> /
+INSERT completed succefully
+
+PL/SQL procedure successfully completed.
+
+SQL> select *from temp1;
+
+     EMPNO ENAME                JOB                         MGR HIREDATE
+---------- -------------------- -------------------- ---------- ---------
+       SAL       COMM     DEPTNO
+---------- ---------- ----------
+      7698 blake                manager                    7839 01-MAY-81
+      2850         30
+
+
+SQL> select *from emp where empno=7369;
+
+     EMPNO ENAME                JOB                         MGR HIREDATE
+---------- -------------------- -------------------- ---------- ---------
+       SAL       COMM     DEPTNO
+---------- ---------- ----------
+      7369 smith                clerk                      7902 17-DEC-80
+       800         20
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  eno NUMBER(4) := 7369;
+  3  com emp.comm%TYPE;
+  4  BEGIN
+  5  SELECT comm INTO com FROM emp WHERE empno = eno;
+  6  IF com IS NULL THEN
+  7  UPDATE emp SET comm =300 WHERE empno=eno;
+  8  ELSE
+  9  com :=com+com*0.25;
+ 10  UPDATE emp SET comm = com WHERE empno = eno;
+ 11  END IF;
+ 12  dbms_output.put_line('UPDATE complete sucessfully');
+ 13* END;select *from emp where empno=7369
+SQL> /
+END;select *from emp where empno=7369
+    *
+ERROR at line 13:
+ORA-06550: line 13, column 5:
+PLS-00103: Encountered the symbol "SELECT"
+ORA-06550: line 13, column 37:
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the
+following:
+* & - + ; / at for mod remainder rem <an exponent (**)> and
+or group having intersect minus order start union where
+connect || multiset
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  eno NUMBER(4) := 7369;
+  3  com emp.comm%TYPE;
+  4  BEGIN
+  5  SELECT comm INTO com FROM emp WHERE empno = eno;
+  6  IF com IS NULL THEN
+  7  UPDATE emp SET comm =300 WHERE empno=eno;
+  8  ELSE
+  9  com :=com+com*0.25;
+ 10  UPDATE emp SET comm = com WHERE empno = eno;
+ 11  END IF;
+ 12  dbms_output.put_line('UPDATE complete sucessfully');
+ 13* END;select *from emp where empno=7369
+ 14  /
+END;select *from emp where empno=7369
+    *
+ERROR at line 13:
+ORA-06550: line 13, column 5:
+PLS-00103: Encountered the symbol "SELECT"
+ORA-06550: line 13, column 37:
+PLS-00103: Encountered the symbol "end-of-file" when expecting one of the
+following:
+* & - + ; / at for mod remainder rem <an exponent (**)> and
+or group having intersect minus order start union where
+connect || multiset
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  eno NUMBER(4) := 7369;
+  3  com emp.comm%TYPE;
+  4  BEGIN
+  5  SELECT comm INTO com FROM emp WHERE empno = eno;
+  6  IF com IS NULL THEN
+  7  UPDATE emp SET comm =300 WHERE empno=eno;
+  8  ELSE
+  9  com :=com+com*0.25;
+ 10  UPDATE emp SET comm = com WHERE empno = eno;
+ 11  END IF;
+ 12  dbms_output.put_line('UPDATE complete sucessfully');
+ 13* END;
+SQL> /
+UPDATE complete sucessfully
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from emp where empno=7369;
+
+     EMPNO ENAME                JOB                         MGR HIREDATE
+---------- -------------------- -------------------- ---------- ---------
+       SAL       COMM     DEPTNO
+---------- ---------- ----------
+      7369 smith                clerk                      7902 17-DEC-80
+       800         25
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  mg emp.mgr%TYPE;
+  3  emnu emp.empno%TYPE;
+  4  en emp.ename%TYPE;
+  5  mn emp.ename%TYPE;
+  6  sn NUMBER(4);
+  7  BEGIN
+  8  sn := &sn;
+  9  SELECT empno,ename,mgr INTO emnu, en, mg FROM emp WHERE
+ 10  empno = sn;
+ 11  LOOP
+ 12  SELECT empno,mgr,ename INTO emnu,mg,mn FROM emp
+ 13  WHERE empno = mg;
+ 14  dbms_output.put_line(sn||' '||en||' '||mn);
+ 15  EXIT WHEN mg IS NULL;
+ 16  sn :=emnu;
+ 17  emnu :=mg;
+ 18  en :=mn;
+ 19  END LOOP;
+ 20  dbms_output.put_line(emnu||' '||mn);
+ 21  COMMIT;
+ 22  END;
+ 23* 23 /
+SQL> /
+Enter value for sn: 7369
+old   8: sn := &sn;
+new   8: sn := 7369;
+23 /
+*
+ERROR at line 23:
+ORA-06550: line 23, column 1:
+PLS-00103: Encountered the symbol "23"
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  mg emp.mgr%TYPE;
+  3  emnu emp.empno%TYPE;
+  4  en emp.ename%TYPE;
+  5  mn emp.ename%TYPE;
+  6  sn NUMBER(4);
+  7  BEGIN
+  8  sn := &sn;
+  9  SELECT empno,ename,mgr INTO emnu, en, mg FROM emp WHERE
+ 10  empno = sn;
+ 11  LOOP
+ 12  SELECT empno,mgr,ename INTO emnu,mg,mn FROM emp
+ 13  WHERE empno = mg;
+ 14  dbms_output.put_line(sn||' '||en||' '||mn);
+ 15  EXIT WHEN mg IS NULL;
+ 16  sn :=emnu;
+ 17  emnu :=mg;
+ 18  en :=mn;
+ 19  END LOOP;
+ 20  dbms_output.put_line(emnu||' '||mn);
+ 21  COMMIT;
+ 22* END;
+ 23  /
+Enter value for sn: 7369
+old   8: sn := &sn;
+new   8: sn := 7369;
+7369 smith ford
+7902 ford jones
+7566 jones king
+7839 king
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  x NUMBER(4);
+  3  TYPE dr IS RECORD ( dno dept.deptno%TYPE, vname dept.dname%TYPE,
+  4  vloc dept.loc%TYPE, name emp.ename%TYPE,
+  5  vsal emp.sal%TYPE, vcom emp.comm%TYPE,
+  6  newsal emp.sal%TYPE);
+  7  d dr;
+  8  BEGIN
+  9  SELECT ename,sal,comm,dept.deptno,dname,loc INTO d.name,d.vsal,
+ 10  d.vcom,d.dno,d.vname,d.vloc FROM emp, dept WHERE
+ 11  emp.deptno=dept.deptno AND empno = &x;
+ 12  d.newsal := d.vsal+NVL(d.vcom,0);
+ 13  dbms_output.put_line(d.dno||' '||d.vname||' '||d.vloc||' '|| d.name||' '||d.vsal||' '|| d.vcom||' '||d.newsal);
+ 14* END;
+SQL> /
+Enter value for x: 7368
+old  11: emp.deptno=dept.deptno AND empno = &x;
+new  11: emp.deptno=dept.deptno AND empno = 7368;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 9
+
+
+SQL> select *from emp where empno=7369;
+
+     EMPNO ENAME                JOB                         MGR HIREDATE
+---------- -------------------- -------------------- ---------- ---------
+       SAL       COMM     DEPTNO
+---------- ---------- ----------
+      7369 smith                clerk                      7902 17-DEC-80
+       800         25
+
+
+SQL>
+

@@ -1,0 +1,1488 @@
+
+SQL> select * from tab;
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ACCOUNT
+TABLE
+
+AQ$_INTERNET_AGENTS
+TABLE
+
+AQ$_INTERNET_AGENT_PRIVS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_KEY_SHARD_MAP
+TABLE
+
+AQ$_QUEUES
+TABLE
+
+AQ$_QUEUE_TABLES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_SCHEDULES
+TABLE
+
+BRANCH
+TABLE
+
+CATALOG
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+COL
+SYNONYM
+
+CUSTOMER
+TABLE
+
+DEPOSITOR
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+HELP
+TABLE
+
+LOGMNRC_CONCOL_GG
+TABLE
+
+LOGMNRC_CON_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_DBNAME_UID_MAP
+TABLE
+
+LOGMNRC_GSBA
+TABLE
+
+LOGMNRC_GSII
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GTCS
+TABLE
+
+LOGMNRC_GTLO
+TABLE
+
+LOGMNRC_INDCOL_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_IND_GG
+TABLE
+
+LOGMNRC_SEQ_GG
+TABLE
+
+LOGMNRC_SHARD_TS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_TS
+TABLE
+
+LOGMNRC_TSPART
+TABLE
+
+LOGMNRC_USER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRGGC_GTCS
+TABLE
+
+LOGMNRGGC_GTLO
+TABLE
+
+LOGMNRP_CTAS_PART_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRT_MDDL$
+TABLE
+
+LOGMNR_AGE_SPILL$
+TABLE
+
+LOGMNR_ATTRCOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_ATTRIBUTE$
+TABLE
+
+LOGMNR_CCOL$
+TABLE
+
+LOGMNR_CDEF$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_COL$
+TABLE
+
+LOGMNR_COLTYPE$
+TABLE
+
+LOGMNR_CON$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_CONTAINER$
+TABLE
+
+LOGMNR_DICTIONARY$
+TABLE
+
+LOGMNR_DICTSTATE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_DID$
+TABLE
+
+LOGMNR_ENC$
+TABLE
+
+LOGMNR_ERROR$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_FILTER$
+TABLE
+
+LOGMNR_GLOBAL$
+TABLE
+
+LOGMNR_GT_TAB_INCLUDE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_GT_USER_INCLUDE$
+TABLE
+
+LOGMNR_GT_XID_INCLUDE$
+TABLE
+
+LOGMNR_ICOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_IDNSEQ$
+TABLE
+
+LOGMNR_IND$
+TABLE
+
+LOGMNR_INDCOMPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_INDPART$
+TABLE
+
+LOGMNR_INDSUBPART$
+TABLE
+
+LOGMNR_KOPM$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOB$
+TABLE
+
+LOGMNR_LOBFRAG$
+TABLE
+
+LOGMNR_LOG$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOGMNR_BUILDLOG
+TABLE
+
+LOGMNR_NTAB$
+TABLE
+
+LOGMNR_OBJ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_OPQTYPE$
+TABLE
+
+LOGMNR_PARAMETER$
+TABLE
+
+LOGMNR_PARTOBJ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PDB_INFO$
+TABLE
+
+LOGMNR_PROCESSED_LOG$
+TABLE
+
+LOGMNR_PROFILE_PLSQL_STATS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROFILE_TABLE_STATS$
+TABLE
+
+LOGMNR_PROPS$
+TABLE
+
+LOGMNR_REFCON$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_RESTART_CKPT$
+TABLE
+
+LOGMNR_RESTART_CKPT_TXINFO$
+TABLE
+
+LOGMNR_SEED$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION$
+TABLE
+
+LOGMNR_SESSION_ACTIONS$
+TABLE
+
+LOGMNR_SESSION_EVOLVE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SHARD_TS
+TABLE
+
+LOGMNR_SPILL$
+TABLE
+
+LOGMNR_SUBCOLTYPE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TAB$
+TABLE
+
+LOGMNR_TABCOMPART$
+TABLE
+
+LOGMNR_TABPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TABSUBPART$
+TABLE
+
+LOGMNR_TS$
+TABLE
+
+LOGMNR_TYPE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_UID$
+TABLE
+
+LOGMNR_USER$
+TABLE
+
+LOGSTDBY$APPLY_MILESTONE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$APPLY_PROGRESS
+TABLE
+
+LOGSTDBY$EDS_TABLES
+TABLE
+
+LOGSTDBY$EVENTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$FLASHBACK_SCN
+TABLE
+
+LOGSTDBY$HISTORY
+TABLE
+
+LOGSTDBY$PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$PLSQL
+TABLE
+
+LOGSTDBY$SCN
+TABLE
+
+LOGSTDBY$SKIP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SKIP_SUPPORT
+TABLE
+
+LOGSTDBY$SKIP_TRANSACTION
+TABLE
+
+MVIEW$_ADV_AJG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_BASETABLE
+TABLE
+
+MVIEW$_ADV_CLIQUE
+TABLE
+
+MVIEW$_ADV_ELIGIBLE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_EXCEPTIONS
+TABLE
+
+MVIEW$_ADV_FILTER
+TABLE
+
+MVIEW$_ADV_FILTERINSTANCE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_FJG
+TABLE
+
+MVIEW$_ADV_GC
+TABLE
+
+MVIEW$_ADV_INFO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_JOURNAL
+TABLE
+
+MVIEW$_ADV_LEVEL
+TABLE
+
+MVIEW$_ADV_LOG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_OUTPUT
+TABLE
+
+MVIEW$_ADV_PARAMETERS
+TABLE
+
+MVIEW$_ADV_PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_PRETTY
+TABLE
+
+MVIEW$_ADV_ROLLUP
+TABLE
+
+MVIEW$_ADV_SQLDEPEND
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_TEMP
+TABLE
+
+MVIEW$_ADV_WORKLOAD
+TABLE
+
+MVIEW_EVALUATIONS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_EXCEPTIONS
+VIEW
+
+MVIEW_FILTER
+VIEW
+
+MVIEW_FILTERINSTANCE
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_LOG
+VIEW
+
+MVIEW_RECOMMENDATIONS
+VIEW
+
+MVIEW_WORKLOAD
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+OL$
+TABLE
+
+OL$HINTS
+TABLE
+
+OL$NODES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+PRODUCT_PRIVS
+VIEW
+
+PRODUCT_USER_PROFILE
+SYNONYM
+
+PUBLICSYN
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+REDO_DB
+TABLE
+
+REDO_LOG
+TABLE
+
+REPL_SUPPORT_MATRIX
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+REPL_VALID_COMPAT
+TABLE
+
+ROLLING$CONNECTIONS
+TABLE
+
+ROLLING$DATABASES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$DIRECTIVES
+TABLE
+
+ROLLING$EVENTS
+TABLE
+
+ROLLING$PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$PLAN
+TABLE
+
+ROLLING$STATISTICS
+TABLE
+
+ROLLING$STATUS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_JOB_ARGS
+VIEW
+
+SCHEDULER_JOB_ARGS_TBL
+TABLE
+
+SCHEDULER_PROGRAM_ARGS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_PROGRAM_ARGS_TBL
+TABLE
+
+SQLPLUS_PRODUCT_PROFILE
+TABLE
+
+SYSCATALOG
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SYSFILES
+SYNONYM
+
+TAB
+SYNONYM
+
+TABQUOTAS
+SYNONYM
+
+
+156 rows selected.
+
+
+
+
+
+
+
+
+
+
+
+SQL> select *from tab;
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ACCOUNT
+TABLE
+
+AQ$_INTERNET_AGENTS
+TABLE
+
+AQ$_INTERNET_AGENT_PRIVS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_KEY_SHARD_MAP
+TABLE
+
+AQ$_QUEUES
+TABLE
+
+AQ$_QUEUE_TABLES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_SCHEDULES
+TABLE
+
+BORROWER
+TABLE
+
+BRANCH
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+CATALOG
+SYNONYM
+
+COL
+SYNONYM
+
+CUSTOMER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+CUSTOMER_NAME
+TABLE
+
+DEPOSITOR
+TABLE
+
+HELP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOAN
+TABLE
+
+LOGMNRC_CONCOL_GG
+TABLE
+
+LOGMNRC_CON_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_DBNAME_UID_MAP
+TABLE
+
+LOGMNRC_GSBA
+TABLE
+
+LOGMNRC_GSII
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GTCS
+TABLE
+
+LOGMNRC_GTLO
+TABLE
+
+LOGMNRC_INDCOL_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_IND_GG
+TABLE
+
+LOGMNRC_SEQ_GG
+TABLE
+
+LOGMNRC_SHARD_TS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_TS
+TABLE
+
+LOGMNRC_TSPART
+TABLE
+
+LOGMNRC_USER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRGGC_GTCS
+TABLE
+
+LOGMNRGGC_GTLO
+TABLE
+
+LOGMNRP_CTAS_PART_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRT_MDDL$
+TABLE
+
+LOGMNR_AGE_SPILL$
+TABLE
+
+LOGMNR_ATTRCOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_ATTRIBUTE$
+TABLE
+
+LOGMNR_CCOL$
+TABLE
+
+LOGMNR_CDEF$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_COL$
+TABLE
+
+LOGMNR_COLTYPE$
+TABLE
+
+LOGMNR_CON$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_CONTAINER$
+TABLE
+
+LOGMNR_DICTIONARY$
+TABLE
+
+LOGMNR_DICTSTATE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_DID$
+TABLE
+
+LOGMNR_ENC$
+TABLE
+
+LOGMNR_ERROR$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_FILTER$
+TABLE
+
+LOGMNR_GLOBAL$
+TABLE
+
+LOGMNR_GT_TAB_INCLUDE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_GT_USER_INCLUDE$
+TABLE
+
+LOGMNR_GT_XID_INCLUDE$
+TABLE
+
+LOGMNR_ICOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_IDNSEQ$
+TABLE
+
+LOGMNR_IND$
+TABLE
+
+LOGMNR_INDCOMPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_INDPART$
+TABLE
+
+LOGMNR_INDSUBPART$
+TABLE
+
+LOGMNR_KOPM$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOB$
+TABLE
+
+LOGMNR_LOBFRAG$
+TABLE
+
+LOGMNR_LOG$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOGMNR_BUILDLOG
+TABLE
+
+LOGMNR_NTAB$
+TABLE
+
+LOGMNR_OBJ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_OPQTYPE$
+TABLE
+
+LOGMNR_PARAMETER$
+TABLE
+
+LOGMNR_PARTOBJ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PDB_INFO$
+TABLE
+
+LOGMNR_PROCESSED_LOG$
+TABLE
+
+LOGMNR_PROFILE_PLSQL_STATS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROFILE_TABLE_STATS$
+TABLE
+
+LOGMNR_PROPS$
+TABLE
+
+LOGMNR_REFCON$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_RESTART_CKPT$
+TABLE
+
+LOGMNR_RESTART_CKPT_TXINFO$
+TABLE
+
+LOGMNR_SEED$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION$
+TABLE
+
+LOGMNR_SESSION_ACTIONS$
+TABLE
+
+LOGMNR_SESSION_EVOLVE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SHARD_TS
+TABLE
+
+LOGMNR_SPILL$
+TABLE
+
+LOGMNR_SUBCOLTYPE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TAB$
+TABLE
+
+LOGMNR_TABCOMPART$
+TABLE
+
+LOGMNR_TABPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TABSUBPART$
+TABLE
+
+LOGMNR_TS$
+TABLE
+
+LOGMNR_TYPE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_UID$
+TABLE
+
+LOGMNR_USER$
+TABLE
+
+LOGSTDBY$APPLY_MILESTONE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$APPLY_PROGRESS
+TABLE
+
+LOGSTDBY$EDS_TABLES
+TABLE
+
+LOGSTDBY$EVENTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$FLASHBACK_SCN
+TABLE
+
+LOGSTDBY$HISTORY
+TABLE
+
+LOGSTDBY$PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$PLSQL
+TABLE
+
+LOGSTDBY$SCN
+TABLE
+
+LOGSTDBY$SKIP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SKIP_SUPPORT
+TABLE
+
+LOGSTDBY$SKIP_TRANSACTION
+TABLE
+
+MVIEW$_ADV_AJG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_BASETABLE
+TABLE
+
+MVIEW$_ADV_CLIQUE
+TABLE
+
+MVIEW$_ADV_ELIGIBLE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_EXCEPTIONS
+TABLE
+
+MVIEW$_ADV_FILTER
+TABLE
+
+MVIEW$_ADV_FILTERINSTANCE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_FJG
+TABLE
+
+MVIEW$_ADV_GC
+TABLE
+
+MVIEW$_ADV_INFO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_JOURNAL
+TABLE
+
+MVIEW$_ADV_LEVEL
+TABLE
+
+MVIEW$_ADV_LOG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_OUTPUT
+TABLE
+
+MVIEW$_ADV_PARAMETERS
+TABLE
+
+MVIEW$_ADV_PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_PRETTY
+TABLE
+
+MVIEW$_ADV_ROLLUP
+TABLE
+
+MVIEW$_ADV_SQLDEPEND
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_TEMP
+TABLE
+
+MVIEW$_ADV_WORKLOAD
+TABLE
+
+MVIEW_EVALUATIONS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_EXCEPTIONS
+VIEW
+
+MVIEW_FILTER
+VIEW
+
+MVIEW_FILTERINSTANCE
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_LOG
+VIEW
+
+MVIEW_RECOMMENDATIONS
+VIEW
+
+MVIEW_WORKLOAD
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+OL$
+TABLE
+
+OL$HINTS
+TABLE
+
+OL$NODES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+PRODUCT_PRIVS
+VIEW
+
+PRODUCT_USER_PROFILE
+SYNONYM
+
+PUBLICSYN
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+REDO_DB
+TABLE
+
+REDO_LOG
+TABLE
+
+REPL_SUPPORT_MATRIX
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+REPL_VALID_COMPAT
+TABLE
+
+ROLLING$CONNECTIONS
+TABLE
+
+ROLLING$DATABASES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$DIRECTIVES
+TABLE
+
+ROLLING$EVENTS
+TABLE
+
+ROLLING$PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$PLAN
+TABLE
+
+ROLLING$STATISTICS
+TABLE
+
+ROLLING$STATUS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_JOB_ARGS
+VIEW
+
+SCHEDULER_JOB_ARGS_TBL
+TABLE
+
+SCHEDULER_PROGRAM_ARGS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_PROGRAM_ARGS_TBL
+TABLE
+
+SQLPLUS_PRODUCT_PROFILE
+TABLE
+
+SYSCATALOG
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SYSFILES
+SYNONYM
+
+TAB
+SYNONYM
+
+TABQUOTAS
+SYNONYM
+
+
+159 rows selected.

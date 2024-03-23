@@ -1,0 +1,576 @@
+
+SQL> set serveroutput on;
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  x NUMBER(4);
+  3  TYPE dr IS RECORD(dno dept.deptno % TYPE, vname dept.dname %
+  4  TYPE, vloc dept.loc % TYPE, name emp.ename %
+  5  TYPE,vsal emp.sal % TYPE,vcom emp.comm %
+  6  TYPE,newsal
+  7  emp.sal % TYPE);
+  8  d dr;
+  9  BEGIN
+ 10  SELECT ename,sal,comm,dept.deptno,dname,loc INTO d.name,d.vsal,
+ 11  d.vcom,d.dno,d.vname,d.vloc FROM emp,dept WHERE emp.deptno
+ 12  =dept.deptno AND empno=&x;
+ 13  d.newsal:=d.vsal+NVL(d.vcom,0);
+ 14  dbms_output.put_line(d.dno||' '||d.vname||' '||' '||d.vloc||' '||' '||d.vsal||' '|| d.vcom||' '||d.newsal);
+ 15* END;
+SQL> /
+Enter value for x: 7369
+old  12: =dept.deptno AND empno=&x;
+new  12: =dept.deptno AND empno=7369;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 10
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  x NUMBER(4);
+  3  TYPE dr IS RECORD(dno dept.deptno % TYPE, vname dept.dname %
+  4  TYPE, vloc dept.loc % TYPE, name emp.ename %
+  5  TYPE,vsal emp.sal % TYPE,vcom emp.comm % TYPE,newsal
+  6  emp.sal % TYPE);
+  7  d dr;
+  8  BEGIN
+  9  SELECT ename,sal,comm,dept.deptno,dname,loc INTO d.name,d.vsal,
+ 10  d.vcom,d.dno,d.vname,d.vloc FROM emp,dept WHERE emp.deptno
+ 11  =dept.deptno AND empno=&x;
+ 12  d.newsal:=d.vsal+NVL(d.vcom,0);
+ 13  dbms_output.put_line(d.dno||' '||d.vname||' '||' '||d.vloc||' '||' '||d.vsal||' '|| d.vcom||' '||d.newsal);
+ 14* END;
+SQL> /
+Enter value for x: 7369
+old  11: =dept.deptno AND empno=&x;
+new  11: =dept.deptno AND empno=7369;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 9
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  xNUMBER(4);
+  3  TYPE dr IS RECORD(dno dept.deptno % TYPE, vname dept.dname %
+  4  TYPE, vloc dept.loc % TYPE, name emp.ename %
+  5  TYPE,vsal emp.sal % TYPE,vcom emp.comm % TYPE,newsal
+  6  emp.sal % TYPE);
+  7  d dr;
+  8  BEGIN
+  9  SELECT ename,sal,comm,dept.deptno,dname,loc INTO d.name,d.vsal,
+ 10  d.vcom,d.dno,d.vname,d.vloc FROM emp,dept WHERE emp.deptno
+ 11  =dept.deptno AND empno=&x;
+ 12  d.newsal:=d.vsal+NVL(d.vcom,0);
+ 13  dbms_output.put_line(d.dno||' '||d.vname||' '||' '||d.vloc||' '||' '||d.vsal||' '|| d.vcom||' '||d.newsal);
+ 14* END;
+SQL> /
+Enter value for x: 7369
+old  11: =dept.deptno AND empno=&x;
+new  11: =dept.deptno AND empno=7369;
+xNUMBER(4);
+       *
+ERROR at line 2:
+ORA-06550: line 2, column 8:
+PLS-00103: Encountered the symbol "(" when expecting one of the following:
+constant exception <an identifier>
+<a double-quoted delimited-identifier> table columns long
+double ref char standard time timestamp interval date binary
+national character nchar
+The symbol "<an identifier>" was substituted for "(" to continue.
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  x NUMBER(4);
+  3  TYPE dr IS RECORD(dno dept.deptno % TYPE, vname dept.dname %
+  4  TYPE, vloc dept.loc % TYPE, name emp.ename %
+  5  TYPE,vsal emp.sal % TYPE,vcom emp.comm % TYPE,newsal
+  6  emp.sal % TYPE);
+  7  d dr;
+  8  BEGIN
+  9  SELECT ename,sal,comm,dept.deptno,dname,loc INTO d.name,d.vsal,
+ 10  d.vcom,d.dno,d.vname,d.vloc FROM emp,dept WHERE emp.deptno
+ 11  =dept.deptno AND empno=&x;
+ 12  d.newsal:=d.vsal+NVL(d.vcom,0);
+ 13  dbms_output.put_line(d.dno||' '||d.vname||' '||' '||d.vloc||' '||' '||d.vsal||' '|| d.vcom||' '||d.newsal);
+ 14* END;
+SQL> /
+Enter value for x: 7369
+old  11: =dept.deptno AND empno=&x;
+new  11: =dept.deptno AND empno=7369;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 9
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  x NUMBER(4);
+  3  TYPE dr IS RECORD(dno dept.deptno % TYPE, vname dept.dname %
+  4  TYPE, vloc dept.loc % TYPE, name emp.ename %
+  5  TYPE,vsal emp.sal % TYPE,vcom emp.comm % TYPE,newsal
+  6  emp.sal % TYPE);
+  7  d dr;
+  8  BEGIN
+  9  SELECT ename,sal,comm,dept.deptno,dname,loc INTO d.name,d.vsal,
+ 10  d.vcom,d.dno,d.vname,d.vloc FROM emp,dept WHERE emp.deptno
+ 11  =dept.deptno AND empno=&x;
+ 12  d.newsal:=d.vsal+NVL(d.vcom,0);
+ 13  dbms_output.put_line(d.dno||' '||d.vname||' '||' '||d.vloc||' '||' '||d.vsal||' '|| d.vcom||' '||d.newsal);
+ 14* END;
+SQL> /
+Enter value for x: 7698
+old  11: =dept.deptno AND empno=&x;
+new  11: =dept.deptno AND empno=7698;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 9
+
+
+SQL> /
+Enter value for x: 7902
+old  11: =dept.deptno AND empno=&x;
+new  11: =dept.deptno AND empno=7902;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 9
+
+
+SQL> /
+Enter value for x: 7368
+old  11: =dept.deptno AND empno=&x;
+new  11: =dept.deptno AND empno=7368;
+DECLARE
+*
+ERROR at line 1:
+ORA-01403: no data found
+ORA-06512: at line 9
+
+
+SQL> DECLARE
+  2  2 TYPE empnameTYPE IS TABLE OF emp.ename % TYPE INDEX BY
+  3  3 BINARY_INTEGER;
+  4  4 TYPE empsalTYPE IS TABLE OF emp.ename % TYPE INDEX BY
+  5  5 BINARY_INTEGER;
+  6  6 enamelist empnameTYPE;
+  7  7 salarylist empsalTYPE;
+  8  8 SUBSCRIPT BINARY_INTEGER:=1;
+  9  9 ctr NUMBER(2):=1;
+ 10  10 BEGIN
+ 11  11 FOR empree IN(SELECT ename,sal FROM emp)
+ 12  12 LOOP
+ 13  13 enamelist(SUBSCRIPT):=empree.ename;
+ 14  14 salarylist(SUBSCRIPT):=empree.sal;
+ 15  15 SUBSCRIPT:=SUBSCRIPT+1;
+ 16  16 END LOOP;
+ 17  17 WHILE ctr<SUBSCRIPT
+ 18  18 LOOP
+ 19  19 dbms_output.put_line(enamelist(ctr));
+ 20  20 dbms_output.put_line(salarylist(ctr));
+ 21  21 ctr:=ctr+1;
+ 22  22 END LOOP;
+ 23  23* END;
+ 24  /
+2 TYPE empnameTYPE IS TABLE OF emp.ename % TYPE INDEX BY
+*
+ERROR at line 2:
+ORA-06550: line 2, column 1:
+PLS-00103: Encountered the symbol "2" when expecting one of the following:
+begin function pragma procedure subtype type <an identifier>
+<a double-quoted delimited-identifier> current cursor delete
+exists prior
+The symbol "2" was ignored.
+ORA-06550: line 3, column 1:
+PLS-00103: Encountered the symbol "3" when expecting one of the following:
+<an identifier> <a double-quoted delimited-identifier> table
+columns long double ref char standard time timestamp interval
+date binary national character nchar
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  TYPE empnameTYPE IS TABLE OF emp.ename % TYPE INDEX BY
+  3  BINARY_INTEGER;
+  4  TYPE empsalTYPE IS TABLE OF emp.ename % TYPE INDEX BY
+  5  BINARY_INTEGER;
+  6  enamelist empnameTYPE;
+  7  salarylist empsalTYPE;
+  8  SUBSCRIPT BINARY_INTEGER:=1;
+  9  ctr NUMBER(2):=1;
+ 10  BEGIN
+ 11  FOR empree IN(SELECT ename,sal FROM emp)
+ 12  LOOP
+ 13  enamelist(SUBSCRIPT):=empree.ename;
+ 14  salarylist(SUBSCRIPT):=empree.sal;
+ 15  SUBSCRIPT:=SUBSCRIPT+1;
+ 16  END LOOP;
+ 17  WHILE ctr<SUBSCRIPT
+ 18  LOOP
+ 19  dbms_output.put_line(enamelist(ctr));
+ 20  dbms_output.put_line(salarylist(ctr));
+ 21  ctr:=ctr+1;
+ 22  END LOOP;
+ 23* END;
+SQL> /
+smith
+800
+allen
+1600
+ward
+1250
+jones
+2975
+martin
+1250
+blake
+2850
+clark
+2450
+scott
+3050
+king
+5000
+turner
+1500
+adams
+1100
+james
+950
+ford
+3000
+miller
+1300
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  vempno emp.empno % TYPE;
+  3  vename emp.ename % TYPE;
+  4  vsal emp.sal % TYPE;
+  5  vdeptno emp.deptno % TYPE;
+  6  CURSOR c1 IS SELECT empno,ename,sal,deptno FROM emp WHERE
+  7  sal+NVL(comm,0)>3000;
+  8  BEGIN
+  9  OPEN c1;
+ 10  LOOP
+ 11  FETCH c1 INTO vempno,vename,vsal,vdeptno;
+ 12  IF c1 % FOUND THEN
+ 13  dbms_output.put_line(vempno||' '||vename||' '||vsal||' '||vdeptno);
+ 14  ELSE
+ 15  EXIT;
+ 16  END IF;
+ 17  END LOOP;
+ 18  CLOSE c1;
+ 19* END;
+SQL> /
+7788 scott 3050
+7839 king 5000
+7902 ford 3000
+
+PL/SQL procedure successfully completed.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  CURSOR c1 IS SELECT empno,ename,sal,deptno FROM emp WHERE sal + NVL
+  3  (comm,0) >3000;
+  4  crr c1%ROWTYPE;
+  5  BEGIN
+  6  OPEN c1;
+  7  LOOP
+  8  Fetch c1 INTO crr;
+  9  IF c1%FOUND THEN
+ 10  dbms_output.put_line(crr.empno|| ' '|| crr.sal|| ' '||crr.deptno);
+ 11  ELSE
+ 12  EXIT;
+ 13  END IF;
+ 14  END LOOP;
+ 15  CLOSE c1;
+ 16* END;
+SQL> /
+7788 3050
+7839 5000
+7902 3000
+
+PL/SQL procedure successfully completed.
+
+SQL> create table temp2 (empno numeric(12,2),ename varchar(20),sal numeric(12,2),
+  2  deptno numeric(12,2));
+
+Table created.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  CURSOR c1(p1 NUMBER)IS SELECT empno,ename,sal,deptno FROM emp
+  3  WHERE deptno=p1;
+  4  crr c1 % ROWTYPE;
+  5  vdeptno NUMBER(2):=30;
+  6  BEGIN
+  7  OPEN c1(10);
+  8  LOOP
+  9  FETCH c1 INTO crr;
+ 10  IF c1 % FOUND THEN
+ 11  IF crr.sal>2500 THEN
+ 12  dbms_output.put_line(crr.empno||' '||crr.ename||' '||crr.sal||' '||crr.deptno);
+ 13  END IF;
+ 14  ELSE
+ 15  EXIT;
+ 16  END IF;
+ 17  END LOOP;
+ 18  CLOSE c1;
+ 19  OPEN c1(vdeptno);
+ 20  LOOP
+ 21  FETCH c1 INTO crr;
+ 22  IF c1 % FOUND THEN
+ 23  IF crr.sal>3000 THEN
+ 24  INSERT INTO temp2 VALUES (crr.empno,
+ 25  crr.ename, crr.sal,crr.deptno);
+ 26  END IF;
+ 27  ELSE
+ 28  EXIT;
+ 29  END IF;
+ 30  END LOOP;
+ 31  CLOSE c1;
+ 32* END;
+SQL> /
+
+PL/SQL procedure successfully completed.
+
+SQL> set serveroutput on;
+SQL> ed
+Wrote file afiedt.buf
+
+  1  DECLARE
+  2  CURSOR c1(p1 NUMBER)IS SELECT empno,ename,sal,deptno FROM emp
+  3  WHERE deptno=p1;
+  4  crr c1 % ROWTYPE;
+  5  vdeptno NUMBER(2):=30;
+  6  BEGIN
+  7  OPEN c1(10);
+  8  LOOP
+  9  FETCH c1 INTO crr;
+ 10  IF c1 % FOUND THEN
+ 11  IF crr.sal>2500 THEN
+ 12  dbms_output.put_line(crr.empno||' '||crr.ename||' '||crr.sal||' '||crr.deptno);
+ 13  END IF;
+ 14  ELSE
+ 15  EXIT;
+ 16  END IF;
+ 17  END LOOP;
+ 18  CLOSE c1;
+ 19  OPEN c1(vdeptno);
+ 20  LOOP
+ 21  FETCH c1 INTO crr;
+ 22  IF c1 % FOUND THEN
+ 23  IF crr.sal>3000 THEN
+ 24  INSERT INTO temp2 VALUES (crr.empno,
+ 25  crr.ename, crr.sal,crr.deptno);
+ 26  END IF;
+ 27  ELSE
+ 28  EXIT;
+ 29  END IF;
+ 30  END LOOP;
+ 31  CLOSE c1;
+ 32* END;
+SQL> /
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

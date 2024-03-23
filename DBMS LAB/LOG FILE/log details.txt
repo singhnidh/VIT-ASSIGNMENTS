@@ -1,0 +1,947 @@
+ 
+SQL> select * from customer1;
+
+no rows selected
+
+SQL> select *from customer;
+
+no rows selected
+
+SQL> insert into customer values('&1','&2','&3');
+Enter value for 1: Enter value for 2:
+Enter value for 3: a
+old   1: insert into customer values('&1','&2','&3')
+new   1: insert into customer values('i','','a')
+
+1 row created.
+
+SQL> insert into customer values('nidhi singh','indra nagar','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('neha singh','niyamatpur','mirzapur');
+
+1 row created.
+
+ 
+SQL> insert into customer values('nidhi singh','indra nagar','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('neha singh','niyamatpur','mirzapur');
+
+1 row created.
+
+SQL> insert into customer values('nilu singh','bagahi','mirzapur');
+
+1 row created.
+
+SQL> insert into customer values('shishir singh','samane ghat','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('shivani','mankuva','bhuj');
+
+1 row created.
+
+SQL> insert into customer values('ayantika','kolkatta','bengal');
+
+1 row created.
+
+SQL> insert into customer values('shreya','rishikesh','haridwar');
+
+1 row created.
+
+SQL> insert into customer values('vivek','baliya','lala chauk');
+
+1 row created.
+
+SQL> select * from customer;
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+i
+a
+
+nidhi singh          indra nagar
+varanasi
+
+neha singh           niyamatpur
+mirzapur
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+nilu singh           bagahi
+mirzapur
+
+shishir singh        samane ghat
+varanasi
+
+shivani              mankuva
+bhuj
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+ayantika             kolkatta
+bengal
+
+shreya               rishikesh
+haridwar
+
+vivek                baliya
+lala chauk
+
+
+9 rows selected.
+
+SQL>
+
+
+
+
+
+SQL> insert into customer values('vaibhav','allahabad','prayagraj');
+
+1 row created.
+
+SQL> insert into customer values('annu','lal nagar','lucknow');
+
+1 row created.
+
+SQL> insert into customer values('ishu','avalesh pur','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('divya pathak','sahajahapur','sahajajapur');
+
+1 row created.
+
+SQL> insert into customer values('saket','sitamadi','balia');
+
+1 row created.
+
+SQL> insert into customer values('janhavi','gaov deviroad','mumbai');
+
+1 row created.
+
+SQL> insert into customer values('ayat ibrahim khan','garegaon','mumbai');
+
+1 row created.
+
+SQL> insert into customer values('yashodhara','guvahati','assam');
+
+1 row created.
+
+SQL> select * from customer;
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+i
+a
+
+nidhi singh          indra nagar
+varanasi
+
+neha singh           niyamatpur
+mirzapur
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+nilu singh           bagahi
+mirzapur
+
+shishir singh        samane ghat
+varanasi
+
+shivani              mankuva
+bhuj
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+ayantika             kolkatta
+bengal
+
+shreya               rishikesh
+haridwar
+
+vivek                baliya
+lala chauk
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+vaibhav              allahabad
+prayagraj
+
+annu                 lal nagar
+lucknow
+
+ishu                 avalesh pur
+varanasi
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+divya pathak         sahajahapur
+sahajajapur
+
+saket                sitamadi
+balia
+
+janhavi              gaov deviroad
+mumbai
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+ayat ibrahim khan    garegaon
+mumbai
+
+yashodhara           guvahati
+assam
+
+
+17 rows selected.
+
+SQL>
+
+
+SQL> select * from branch;
+
+no rows selected
+
+SQL> insert into branch values('sbi','lucknow','1000000);
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> insert into branch values('pnb','mirzapur',50000);
+
+1 row created.
+
+SQL> insert into branch values('iob','mumbai',5000000);
+
+1 row created.
+
+SQL> insert into branch values('icc','sahajahapur',960000);
+
+1 row created.
+
+SQL> insert into branch values('kvb','bengal',9060000);
+
+1 row created.
+
+SQL> insert into branch values('icici','haridwar',60000);
+
+1 row created.
+
+SQL> insert into branch values('hdfc','varanasi',800000);
+
+1 row created.
+
+SQL> insert into branch values('hsbc','bhuj',8000000);
+
+1 row created.
+
+SQL> select * from branch;
+
+BRANCH_NAME     BRANCH_CITY                        ASSETS
+--------------- ------------------------------ ----------
+pnb             mirzapur                            50000
+iob             mumbai                            5000000
+icc             sahajahapur                        960000
+kvb             bengal                            9060000
+icici           haridwar                            60000
+hdfc            varanasi                           800000
+hsbc            bhuj                              8000000
+
+7 rows selected.
+ 
+SQL> select *from customer;
+
+no rows selected
+
+SQL> insert into customer values('&1','&2','&3');
+Enter value for 1: Enter value for 2:
+Enter value for 3: a
+old   1: insert into customer values('&1','&2','&3')
+new   1: insert into customer values('i','','a')
+
+1 row created.
+
+SQL> insert into customer values('nidhi singh','indra nagar','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('neha singh','niyamatpur','mirzapur');
+
+1 row created.
+
+SQL> insert into customer values('nilu singh','bagahi','mirzapur');
+
+1 row created.
+
+SQL> insert into customer values('shishir singh','samane ghat','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('shivani','mankuva','bhuj');
+
+1 row created.
+
+SQL> insert into customer values('ayantika','kolkatta','bengal');
+
+1 row created.
+
+SQL> insert into customer values('shreya','rishikesh','haridwar');
+
+1 row created.
+
+SQL> insert into customer values('vivek','baliya','lala chauk');
+
+1 row created.
+
+SQL> select * from customer;
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+i
+a
+
+nidhi singh          indra nagar
+varanasi
+
+neha singh           niyamatpur
+mirzapur
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+nilu singh           bagahi
+mirzapur
+
+shishir singh        samane ghat
+varanasi
+
+shivani              mankuva
+bhuj
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+ayantika             kolkatta
+bengal
+
+shreya               rishikesh
+haridwar
+
+vivek                baliya
+lala chauk
+
+
+9 rows selected.
+
+SQL> insert into customer values('vaibhav','allahabad','prayagraj');
+
+1 row created.
+
+SQL> insert into customer values('annu','lal nagar','lucknow');
+
+1 row created.
+
+SQL> insert into customer values('ishu','avalesh pur','varanasi');
+
+1 row created.
+
+SQL> insert into customer values('divya pathak','sahajahapur','sahajajapur');
+
+1 row created.
+
+SQL> insert into customer values('saket','sitamadi','balia');
+
+1 row created.
+
+SQL> insert into customer values('janhavi','gaov deviroad','mumbai');
+
+1 row created.
+
+SQL> insert into customer values('ayat ibrahim khan','garegaon','mumbai');
+
+1 row created.
+
+SQL> insert into customer values('yashodhara','guvahati','assam');
+
+1 row created.
+
+SQL> select * from customer;
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+i
+a
+
+nidhi singh          indra nagar
+varanasi
+
+neha singh           niyamatpur
+mirzapur
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+nilu singh           bagahi
+mirzapur
+
+shishir singh        samane ghat
+varanasi
+
+shivani              mankuva
+bhuj
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+ayantika             kolkatta
+bengal
+
+shreya               rishikesh
+haridwar
+
+vivek                baliya
+lala chauk
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+vaibhav              allahabad
+prayagraj
+
+annu                 lal nagar
+lucknow
+
+ishu                 avalesh pur
+varanasi
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+divya pathak         sahajahapur
+sahajajapur
+
+saket                sitamadi
+balia
+
+janhavi              gaov deviroad
+mumbai
+
+
+CUSTOMER_NAME        CUSTOMER_STREET
+-------------------- ------------------------------
+CUSTOMER_CITY
+------------------------------
+ayat ibrahim khan    garegaon
+mumbai
+
+yashodhara           guvahati
+assam
+
+
+17 rows selected.
+
+SQL> select * from branch;
+
+no rows selected
+
+SQL> insert into branch values('sbi','lucknow','1000000);
+ERROR:
+ORA-01756: quoted string not properly terminated
+
+
+SQL> insert into branch values('pnb','mirzapur',50000);
+
+1 row created.
+
+SQL> insert into branch values('iob','mumbai',5000000);
+
+1 row created.
+
+SQL> insert into branch values('icc','sahajahapur',960000);
+
+1 row created.
+
+SQL> insert into branch values('kvb','bengal',9060000);
+
+1 row created.
+
+SQL> insert into branch values('icici','haridwar',60000);
+
+1 row created.
+
+SQL> insert into branch values('hdfc','varanasi',800000);
+
+1 row created.
+
+SQL> insert into branch values('hsbc','bhuj',8000000);
+
+1 row created.
+
+SQL> select * from branch;
+
+BRANCH_NAME     BRANCH_CITY                        ASSETS
+--------------- ------------------------------ ----------
+pnb             mirzapur                            50000
+iob             mumbai                            5000000
+icc             sahajahapur                        960000
+kvb             bengal                            9060000
+icici           haridwar                            60000
+hdfc            varanasi                           800000
+hsbc            bhuj                              8000000
+
+7 rows selected.
+ ############################################################################ account ############################################
+
+SQL> select *from depositor;
+
+no rows selected
+
+SQL> insert into depositor values('divya pathak','1008');
+
+1 row created.
+
+SQL> select * from depositor;
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+divya pathak         1008
+
+SQL> insert into depositor values('divya pathak','1007');
+
+1 row created.
+
+SQL> insert into depositor values('divya pathak','1006');
+
+1 row created.
+
+SQL> insert into depositor values('divya pathak','1005');
+
+1 row created.
+
+SQL> insert into depositor values('ayat','1005');
+
+1 row created.
+
+SQL> insert into depositor values('ayat','1010');
+
+1 row created.
+
+SQL> insert into depositor values('ayat','1009');
+
+1 row created.
+
+SQL> insert into depositor values('ayat','1008');
+
+1 row created.
+
+SQL> insert into depositor values('ayat','1007');
+
+1 row created.
+
+SQL> insert into depositor values('ayantika','1007');
+
+1 row created.
+
+SQL> insert into depositor values('ayantika','1008');
+
+1 row created.
+
+SQL> insert into depositor values('ayantika','1006');
+
+1 row created.
+
+SQL> insert into depositor values('ayantika','1006');
+insert into depositor values('ayantika','1006')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C008321) violated
+
+
+SQL> insert into depositor values('ayantika','1005');
+
+1 row created.
+
+SQL> insert into depositor values('ayantika','1004');
+
+1 row created.
+
+SQL> insert into depositor values('annu','1004');
+
+1 row created.
+
+SQL> insert into depositor values('annu','1005');
+
+1 row created.
+
+SQL> insert into depositor values('annu','1003');
+
+1 row created.
+
+SQL> insert into depositor values('annu','1002');
+
+1 row created.
+
+SQL>
+
+
+
+SQL> insert into depositor values('annu','1010');
+
+1 row created.
+
+SQL> insert into depositor values('ishu','1002');
+
+1 row created.
+
+SQL> insert into depositor values('ishu','1003');
+
+1 row created.
+
+SQL> insert into depositor values('ishu','1004');
+
+1 row created.
+
+SQL> insert into depositor values('ishu','1005');
+
+1 row created.
+
+SQL> insert into depositor values('ishu','1006');
+
+1 row created.
+
+SQL> insert into depositor values('janhavi','1006');
+
+1 row created.
+
+SQL> insert into depositor('janhavi','1007');
+insert into depositor('janhavi','1007')
+                      *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert into depositor valuse('janhavi','1007');
+insert into depositor valuse('janhavi','1007')
+                             *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert into depositor value('janhavi','1007');
+insert into depositor value('janhavi','1007')
+                            *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> insert into depositor values('janhavi','1007');
+
+1 row created.
+
+SQL> insert into depositor values('janhavi','1008');
+
+1 row created.
+
+SQL> insert into depositor values('janhavi','1009');
+
+1 row created.
+
+SQL> insert into depositor values('janhavi','1010');
+
+1 row created.
+
+SQL> insert into depositor values('neha singh','1010');
+
+1 row created.
+
+SQL> insert into depositor values('neha singh','1009');
+
+1 row created.
+
+SQL> insert into depositor values('neha singh','1008');
+
+1 row created.
+
+SQL> insert into depositor values('neha singh','1007');
+
+1 row created.
+
+SQL> insert into depositor values('neha singh','1006');
+
+1 row created.
+
+SQL> insert into depositor values('nilu singh','1006');
+
+1 row created.
+
+SQL> insert into depositor values('nilu singh','1005');
+
+1 row created.
+
+SQL> insert into depositor values('nilu singh','1004');
+
+1 row created.
+
+SQL> insert into depositor values('nilu singh','1003');
+
+1 row created.
+
+SQL> insert into depositor values('nilu singh','1002');
+
+1 row created.
+
+SQL> insert into depositor values('nilu singh','1001');
+
+1 row created.
+
+SQL> insert into depositor values('saket','1001');
+
+1 row created.
+
+SQL> insert into depositor values('saket','1010');
+
+1 row created.
+
+SQL> insert into depositor values('saket','1009');
+
+1 row created.
+
+SQL> insert into depositor values('saket','1008');
+
+1 row created.
+
+SQL> insert into depositor values('saket','1007');
+
+1 row created.
+
+SQL> insert into depositor values('shishir singh','1007');
+
+1 row created.
+
+SQL> insert into depositor values('shishir singh','1006');
+
+1 row created.
+
+SQL> insert into depositor values('shishir singh','1005');
+
+1 row created.
+
+SQL> insert into depositor values('shishir singh','1004');
+
+1 row created.
+
+SQL> insert into depositor values('shishir singh','1003');
+
+1 row created.
+
+SQL> insert into depositor values('shishir singh','1001');
+
+1 row created.
+
+SQL> insert into depositor values('shivani','1006');
+
+1 row created.
+
+SQL> insert into depositor values('shivani','1010');
+
+1 row created.
+
+SQL> insert into depositor values('shivani','1009');
+
+1 row created.
+
+SQL> insert into depositor values('shivani','1008');
+
+1 row created.
+
+SQL> insert into depositor values('shreya','1008');
+
+1 row created.
+
+SQL> insert into depositor values('shreya','1010');
+
+1 row created.
+
+SQL> insert into depositor values('shreya','1003');
+
+1 row created.
+
+SQL> insert into depositor values('shreya','1001');
+
+1 row created.
+
+SQL> insert into depositor values('shreya','1005');
+
+1 row created.
+
+SQL> insert into depositor values('vaibhav','1005');
+
+1 row created.
+
+SQL> insert into depositor values('vaibhav','1004');
+
+1 row created.
+
+SQL> insert into depositor values('vaibhav','1003');
+
+1 row created.
+
+SQL> insert into depositor values('vaibhav','1001');
+
+1 row created.
+
+SQL> insert into depositor values('vivek','1004');
+
+1 row created.
+
+SQL> insert into depositor values('vivek','1006');
+
+1 row created.
+
+SQL> insert into depositor values('vivek','1008');
+
+1 row created.
+
+SQL> insert into depositor values('vivek','1010');
+
+1 row created.
+
+SQL> select * from depositor;
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+divya pathak         1008
+divya pathak         1007
+divya pathak         1006
+divya pathak         1005
+ayat                 1005
+ayat                 1010
+ayat                 1009
+ayat                 1008
+ayat                 1007
+ayantika             1007
+ayantika             1008
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+ayantika             1006
+ayantika             1005
+ayantika             1004
+annu                 1004
+annu                 1005
+annu                 1003
+annu                 1002
+annu                 1010
+ishu                 1002
+ishu                 1003
+ishu                 1004
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+ishu                 1005
+ishu                 1006
+janhavi              1006
+janhavi              1007
+janhavi              1008
+janhavi              1009
+janhavi              1010
+neha singh           1010
+neha singh           1009
+neha singh           1008
+neha singh           1007
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+neha singh           1006
+nilu singh           1006
+nilu singh           1005
+nilu singh           1004
+nilu singh           1003
+nilu singh           1002
+nilu singh           1001
+saket                1001
+saket                1010
+saket                1009
+saket                1008
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+saket                1007
+shishir singh        1007
+shishir singh        1006
+shishir singh        1005
+shishir singh        1004
+shishir singh        1003
+shishir singh        1001
+shivani              1006
+shivani              1010
+shivani              1009
+shivani              1008
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+shreya               1008
+shreya               1010
+shreya               1003
+shreya               1001
+shreya               1005
+vaibhav              1005
+vaibhav              1004
+vaibhav              1003
+vaibhav              1001
+vivek                1004
+vivek                1006
+
+CUSTOMER_NAME        ACCOUNT_NO
+-------------------- ----------
+vivek                1008
+vivek                1010
+
+68 rows selected.
+  

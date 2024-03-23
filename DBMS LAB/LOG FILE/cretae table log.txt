@@ -1,0 +1,124 @@
+SQL> create table customer(customer_name char(20), customer_street char(30), customer_city char(30), primary key(customer_name));
+
+Table created.
+
+SQL> desc customer;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUSTOMER_NAME                             NOT NULL CHAR(20)
+ CUSTOMER_STREET                                    CHAR(30)
+ CUSTOMER_CITY                                      CHAR(30)
+
+SQL> create table branch (branch_name char(15), branch_city char(30), assets numeric(16,2),primary key(branch_name), check (assets>=0),check(branch_name in ('sbi','pnb','iob','icc','kvb','icici','hdfc','hsbc')));
+
+Table created.
+
+SQL> desc branch;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ BRANCH_NAME                               NOT NULL CHAR(15)
+ BRANCH_CITY                                        CHAR(30)
+ ASSETS                                             NUMBER(16,2)
+
+SQL> create table account(account_no char(10), branch_name char(15), balance numeric(12,2) check(balance>0),primary key(account_no),foreign key(branch_name) references branch(branch_name));
+
+Table created.
+
+SQL> desc account;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACCOUNT_NO                                NOT NULL CHAR(10)
+ BRANCH_NAME                                        CHAR(15)
+ BALANCE                                            NUMBER(12,2)
+
+SQL> create table depositor (customer_name char(20), account_no char(10), primary key(customer_name, account_no));
+
+Table created.
+
+SQL> desc depositor;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUSTOMER_NAME                             NOT NULL CHAR(20)
+ ACCOUNT_NO                                NOT NULL CHAR(10)
+
+SQL> create table customer_name(cn) as select customer_name from customer;
+
+Table created.
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+
+SQL> create table depositor(customer_name char(20), account_no char(10), primary key(customer_name, account_no));
+create table depositor(customer_name char(20), account_no char(10), primary key(customer_name, account_no))
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> desc depositor;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUSTOMER_NAME                             NOT NULL CHAR(20)
+ ACCOUNT_NO                                NOT NULL CHAR(10)
+
+SQL>
+
+
+
+SQL> create table loan(loan_no char(20),branch_name char(20), amount numeric(12,2),primary key(loan_no));
+
+Table created.
+
+SQL> desc loan;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOAN_NO                                   NOT NULL CHAR(20)
+ BRANCH_NAME                                        CHAR(20)
+ AMOUNT                                             NUMBER(12,2)
+
+SQL> create table borrower(customer_name char(20), loan_no char(20), primary key(customer_name, loan));
+create table borrower(customer_name char(20), loan_no char(20), primary key(customer_name, loan))
+                                                                                           *
+ERROR at line 1:
+ORA-00904: "LOAN": invalid identifier
+
+
+SQL> create table borrower(customer_name char(20), loan_no char(20), primary key(customer_name, loan));
+create table borrower(customer_name char(20), loan_no char(20), primary key(customer_name, loan))
+                                                                                           *
+ERROR at line 1:
+ORA-00904: "LOAN": invalid identifier
+
+
+SQL> create table borrower(customer_name char(20), loan_no char(20), primary key(customer_name, loan_no));
+
+Table created.
+
+SQL> desc borrower;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CUSTOMER_NAME                             NOT NULL CHAR(20)
+ LOAN_NO                                   NOT NULL CHAR(20)
+
+SQL> create table branch1(brname, brcity) as select branch_name, branch_city from branch;
+
+Table created.
+
+SQL> select * from branch1;
+
+no rows selected
+
+SQL> create table customer1 as select customer_name,customer_street,customer_city from customer where customer_city in ('mumbai','delhi','varanasi');
+
+Table created.
+
+
+SQL> create table emp(empno numeric(12,2), ename varchar(20), job varchar(20), mgr numeric(12,2), hiredate date, sal numeric(12,2), comm numeric(12,2), deptno numeric(12,2));
+
+Table created.
+
+SQL> create table dept(deptno numeric(12,2), dname varchar(20), loc varchar(20));
+
+Table created.

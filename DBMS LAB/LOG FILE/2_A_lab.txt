@@ -1,0 +1,2735 @@
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+
+SQL> alter table customer_name add city char(20);
+
+Table altered.
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+ CITY                                               CHAR(20)
+
+SQL> alter table customer_name drop city;
+alter table customer_name drop city
+                               *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table customer_name drop column city;
+
+Table altered.
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+
+SQL> alter table customer_name drop primary key;
+alter table customer_name drop primary key
+*
+ERROR at line 1:
+ORA-02441: Cannot drop nonexistent primary key
+
+
+SQL> select * from customer_name;
+
+no rows selected
+
+SQL> select * from customer_name;
+
+no rows selected
+
+SQL> create table customer_name(cn) as select customer_name from customer;
+create table customer_name(cn) as select customer_name from customer
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> drop table customer_name;
+
+Table dropped.
+
+SQL> create table customer_name(cn) as select customer_name from customer;
+
+Table created.
+
+SQL> select * from customer_name;
+
+CN
+--------------------
+annu
+ayantika
+ayat ibrahim khan
+divya pathak
+i
+ishu
+janhavi
+neha singh
+nidhi singh
+nilu singh
+saket
+
+CN
+--------------------
+shishir singh
+shivani
+shreya
+vaibhav
+vivek
+yashodhara
+
+17 rows selected.
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+
+SQL> alter table customer_name add city char(20);
+
+Table altered.
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+ CITY                                               CHAR(20)
+
+SQL> alter table customer_name drop city;
+alter table customer_name drop city
+                               *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table customer_name drop column city;
+
+Table altered.
+
+SQL> desc customer_name;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ CN                                                 CHAR(20)
+
+SQL> alter table customer_name drop primary key;
+alter table customer_name drop primary key
+*
+ERROR at line 1:
+ORA-02441: Cannot drop nonexistent primary key
+
+SQL> select * from customer_name;
+
+CN
+--------------------
+annu
+ayantika
+ayat ibrahim khan
+divya pathak
+i
+ishu
+janhavi
+neha singh
+nidhi singh
+nilu singh
+saket
+
+CN
+--------------------
+shishir singh
+shivani
+shreya
+vaibhav
+vivek
+yashodhara
+
+17 rows selected.
+
+SQL> delete from customer_name where cn='janhavi';
+
+1 row deleted.
+
+SQL> select * from customer_name;
+
+CN
+--------------------
+annu
+ayantika
+ayat ibrahim khan
+divya pathak
+i
+ishu
+neha singh
+nidhi singh
+nilu singh
+saket
+shishir singh
+
+CN
+--------------------
+shivani
+shreya
+vaibhav
+vivek
+yashodhara
+
+16 rows selected.
+
+SQL> select * from customer_name;
+
+CN
+--------------------
+annu
+ayantika
+ayat ibrahim khan
+divya pathak
+i
+ishu
+neha singh
+nidhi singh
+nilu singh
+saket
+shishir singh
+
+CN
+--------------------
+shivani
+shreya
+vaibhav
+vivek
+yashodhara
+
+16 rows selected.
+
+SQL> delete from customer_name where cn like '%singh%';
+
+4 rows deleted.
+
+SQL> select * from customer_name;
+
+CN
+--------------------
+annu
+ayantika
+ayat ibrahim khan
+divya pathak
+i
+ishu
+saket
+shivani
+shreya
+vaibhav
+vivek
+
+CN
+--------------------
+yashodhara
+
+12 rows selected.
+
+SQL> delete customer_name;
+
+12 rows deleted.
+
+SQL> select * from customer_name;
+
+no rows selected
+
+SQL> alter table customer_name drop column cn;;
+alter table customer_name drop column cn;
+                                        *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select * from customer_name;
+
+no rows selected
+
+SQL>
+
+SQL> select * from tab;
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION_EVOLVE$
+TABLE
+
+LOGMNR_GLOBAL$
+TABLE
+
+LOGMNR_GT_TAB_INCLUDE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_GT_USER_INCLUDE$
+TABLE
+
+LOGMNR_GT_XID_INCLUDE$
+TABLE
+
+LOGMNR_PDB_INFO$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_DID$
+TABLE
+
+LOGMNR_UID$
+TABLE
+
+LOGMNRGGC_GTLO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRGGC_GTCS
+TABLE
+
+LOGMNRC_DBNAME_UID_MAP
+TABLE
+
+LOGMNR_LOG$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROCESSED_LOG$
+TABLE
+
+LOGMNR_SPILL$
+TABLE
+
+LOGMNR_AGE_SPILL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_RESTART_CKPT_TXINFO$
+TABLE
+
+LOGMNR_ERROR$
+TABLE
+
+LOGMNR_RESTART_CKPT$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_FILTER$
+TABLE
+
+LOGMNR_SESSION_ACTIONS$
+TABLE
+
+LOGMNR_PARAMETER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION$
+TABLE
+
+LOGMNR_PROFILE_TABLE_STATS$
+TABLE
+
+LOGMNR_PROFILE_PLSQL_STATS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRT_MDDL$
+TABLE
+
+REDO_DB
+TABLE
+
+REDO_LOG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$CONNECTIONS
+TABLE
+
+ROLLING$DATABASES
+TABLE
+
+ROLLING$DIRECTIVES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$EVENTS
+TABLE
+
+ROLLING$PARAMETERS
+TABLE
+
+ROLLING$PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$STATISTICS
+TABLE
+
+ROLLING$STATUS
+TABLE
+
+SYSCATALOG
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+CATALOG
+SYNONYM
+
+TAB
+SYNONYM
+
+COL
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+TABQUOTAS
+SYNONYM
+
+SYSFILES
+SYNONYM
+
+PUBLICSYN
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_WORKLOAD
+TABLE
+
+MVIEW$_ADV_BASETABLE
+TABLE
+
+MVIEW$_ADV_SQLDEPEND
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_PRETTY
+TABLE
+
+MVIEW$_ADV_TEMP
+TABLE
+
+MVIEW$_ADV_FILTER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_LOG
+TABLE
+
+MVIEW$_ADV_FILTERINSTANCE
+TABLE
+
+MVIEW$_ADV_LEVEL
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_ROLLUP
+TABLE
+
+MVIEW$_ADV_AJG
+TABLE
+
+MVIEW$_ADV_FJG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_GC
+TABLE
+
+MVIEW$_ADV_CLIQUE
+TABLE
+
+MVIEW$_ADV_ELIGIBLE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_OUTPUT
+TABLE
+
+MVIEW$_ADV_EXCEPTIONS
+TABLE
+
+MVIEW$_ADV_PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_INFO
+TABLE
+
+MVIEW$_ADV_JOURNAL
+TABLE
+
+MVIEW$_ADV_PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_WORKLOAD
+VIEW
+
+MVIEW_FILTER
+VIEW
+
+MVIEW_LOG
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_FILTERINSTANCE
+VIEW
+
+MVIEW_RECOMMENDATIONS
+VIEW
+
+MVIEW_EVALUATIONS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_EXCEPTIONS
+VIEW
+
+OL$
+TABLE
+
+OL$HINTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+OL$NODES
+TABLE
+
+AQ$_QUEUE_TABLES
+TABLE
+
+AQ$_KEY_SHARD_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_QUEUES
+TABLE
+
+AQ$_SCHEDULES
+TABLE
+
+AQ$_INTERNET_AGENTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_INTERNET_AGENT_PRIVS
+TABLE
+
+LOGMNR_DICTSTATE$
+TABLE
+
+LOGMNRC_GTLO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GTCS
+TABLE
+
+LOGMNRC_SEQ_GG
+TABLE
+
+LOGMNRC_CON_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_CONCOL_GG
+TABLE
+
+LOGMNRC_IND_GG
+TABLE
+
+LOGMNRC_INDCOL_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_SHARD_TS
+TABLE
+
+LOGMNRC_TSPART
+TABLE
+
+LOGMNRC_TS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GSII
+TABLE
+
+LOGMNRC_GSBA
+TABLE
+
+LOGMNRC_USER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SEED$
+TABLE
+
+LOGMNR_DICTIONARY$
+TABLE
+
+LOGMNR_OBJ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TAB$
+TABLE
+
+LOGMNR_COL$
+TABLE
+
+LOGMNR_ATTRCOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TS$
+TABLE
+
+LOGMNR_IND$
+TABLE
+
+LOGMNR_USER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TABPART$
+TABLE
+
+LOGMNR_TABSUBPART$
+TABLE
+
+LOGMNR_TABCOMPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TYPE$
+TABLE
+
+LOGMNR_COLTYPE$
+TABLE
+
+LOGMNR_ATTRIBUTE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOB$
+TABLE
+
+LOGMNR_CON$
+TABLE
+
+LOGMNR_CONTAINER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_CDEF$
+TABLE
+
+LOGMNR_CCOL$
+TABLE
+
+LOGMNR_ICOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOBFRAG$
+TABLE
+
+LOGMNR_INDPART$
+TABLE
+
+LOGMNR_INDSUBPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_INDCOMPART$
+TABLE
+
+LOGMNR_LOGMNR_BUILDLOG
+TABLE
+
+LOGMNR_NTAB$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_OPQTYPE$
+TABLE
+
+LOGMNR_SUBCOLTYPE$
+TABLE
+
+LOGMNR_KOPM$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROPS$
+TABLE
+
+LOGMNR_ENC$
+TABLE
+
+LOGMNR_REFCON$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_IDNSEQ$
+TABLE
+
+LOGMNR_PARTOBJ$
+TABLE
+
+LOGMNRP_CTAS_PART_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SHARD_TS
+TABLE
+
+SCHEDULER_PROGRAM_ARGS
+VIEW
+
+SCHEDULER_JOB_ARGS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_PROGRAM_ARGS_TBL
+TABLE
+
+SCHEDULER_JOB_ARGS_TBL
+TABLE
+
+LOGSTDBY$PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$EVENTS
+TABLE
+
+LOGSTDBY$APPLY_PROGRESS
+TABLE
+
+LOGSTDBY$APPLY_MILESTONE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SCN
+TABLE
+
+LOGSTDBY$FLASHBACK_SCN
+TABLE
+
+LOGSTDBY$PLSQL
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SKIP_TRANSACTION
+TABLE
+
+LOGSTDBY$SKIP
+TABLE
+
+LOGSTDBY$SKIP_SUPPORT
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$HISTORY
+TABLE
+
+LOGSTDBY$EDS_TABLES
+TABLE
+
+REPL_VALID_COMPAT
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+REPL_SUPPORT_MATRIX
+TABLE
+
+PRODUCT_PRIVS
+VIEW
+
+SQLPLUS_PRODUCT_PROFILE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+PRODUCT_USER_PROFILE
+SYNONYM
+
+HELP
+TABLE
+
+CUSTOMER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+BRANCH
+TABLE
+
+ACCOUNT
+TABLE
+
+DEPOSITOR
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOAN
+TABLE
+
+BORROWER
+TABLE
+
+CUSTOMER1
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+BRANCH1
+TABLE
+
+CUSTOMER_NAME
+TABLE
+
+
+161 rows selected.
+
+SQL>
+
+ 
+SQL> select * from customer_name;
+
+no rows selected
+
+SQL> drop table customer_name;
+
+Table dropped.
+
+SQL> select * from customer_name;
+select * from customer_name
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> select * from tab;
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION_EVOLVE$
+TABLE
+
+LOGMNR_GLOBAL$
+TABLE
+
+LOGMNR_GT_TAB_INCLUDE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_GT_USER_INCLUDE$
+TABLE
+
+LOGMNR_GT_XID_INCLUDE$
+TABLE
+
+LOGMNR_PDB_INFO$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_DID$
+TABLE
+
+LOGMNR_UID$
+TABLE
+
+LOGMNRGGC_GTLO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRGGC_GTCS
+TABLE
+
+LOGMNRC_DBNAME_UID_MAP
+TABLE
+
+LOGMNR_LOG$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROCESSED_LOG$
+TABLE
+
+LOGMNR_SPILL$
+TABLE
+
+LOGMNR_AGE_SPILL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_RESTART_CKPT_TXINFO$
+TABLE
+
+LOGMNR_ERROR$
+TABLE
+
+LOGMNR_RESTART_CKPT$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_FILTER$
+TABLE
+
+LOGMNR_SESSION_ACTIONS$
+TABLE
+
+LOGMNR_PARAMETER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SESSION$
+TABLE
+
+LOGMNR_PROFILE_TABLE_STATS$
+TABLE
+
+LOGMNR_PROFILE_PLSQL_STATS$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRT_MDDL$
+TABLE
+
+REDO_DB
+TABLE
+
+REDO_LOG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$CONNECTIONS
+TABLE
+
+ROLLING$DATABASES
+TABLE
+
+ROLLING$DIRECTIVES
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$EVENTS
+TABLE
+
+ROLLING$PARAMETERS
+TABLE
+
+ROLLING$PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+ROLLING$STATISTICS
+TABLE
+
+ROLLING$STATUS
+TABLE
+
+SYSCATALOG
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+CATALOG
+SYNONYM
+
+TAB
+SYNONYM
+
+COL
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+TABQUOTAS
+SYNONYM
+
+SYSFILES
+SYNONYM
+
+PUBLICSYN
+SYNONYM
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_WORKLOAD
+TABLE
+
+MVIEW$_ADV_BASETABLE
+TABLE
+
+MVIEW$_ADV_SQLDEPEND
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_PRETTY
+TABLE
+
+MVIEW$_ADV_TEMP
+TABLE
+
+MVIEW$_ADV_FILTER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_LOG
+TABLE
+
+MVIEW$_ADV_FILTERINSTANCE
+TABLE
+
+MVIEW$_ADV_LEVEL
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_ROLLUP
+TABLE
+
+MVIEW$_ADV_AJG
+TABLE
+
+MVIEW$_ADV_FJG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_GC
+TABLE
+
+MVIEW$_ADV_CLIQUE
+TABLE
+
+MVIEW$_ADV_ELIGIBLE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_OUTPUT
+TABLE
+
+MVIEW$_ADV_EXCEPTIONS
+TABLE
+
+MVIEW$_ADV_PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW$_ADV_INFO
+TABLE
+
+MVIEW$_ADV_JOURNAL
+TABLE
+
+MVIEW$_ADV_PLAN
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_WORKLOAD
+VIEW
+
+MVIEW_FILTER
+VIEW
+
+MVIEW_LOG
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_FILTERINSTANCE
+VIEW
+
+MVIEW_RECOMMENDATIONS
+VIEW
+
+MVIEW_EVALUATIONS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+MVIEW_EXCEPTIONS
+VIEW
+
+OL$
+TABLE
+
+OL$HINTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+OL$NODES
+TABLE
+
+AQ$_QUEUE_TABLES
+TABLE
+
+AQ$_KEY_SHARD_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_QUEUES
+TABLE
+
+AQ$_SCHEDULES
+TABLE
+
+AQ$_INTERNET_AGENTS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+AQ$_INTERNET_AGENT_PRIVS
+TABLE
+
+LOGMNR_DICTSTATE$
+TABLE
+
+LOGMNRC_GTLO
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GTCS
+TABLE
+
+LOGMNRC_SEQ_GG
+TABLE
+
+LOGMNRC_CON_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_CONCOL_GG
+TABLE
+
+LOGMNRC_IND_GG
+TABLE
+
+LOGMNRC_INDCOL_GG
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_SHARD_TS
+TABLE
+
+LOGMNRC_TSPART
+TABLE
+
+LOGMNRC_TS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNRC_GSII
+TABLE
+
+LOGMNRC_GSBA
+TABLE
+
+LOGMNRC_USER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SEED$
+TABLE
+
+LOGMNR_DICTIONARY$
+TABLE
+
+LOGMNR_OBJ$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TAB$
+TABLE
+
+LOGMNR_COL$
+TABLE
+
+LOGMNR_ATTRCOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TS$
+TABLE
+
+LOGMNR_IND$
+TABLE
+
+LOGMNR_USER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TABPART$
+TABLE
+
+LOGMNR_TABSUBPART$
+TABLE
+
+LOGMNR_TABCOMPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_TYPE$
+TABLE
+
+LOGMNR_COLTYPE$
+TABLE
+
+LOGMNR_ATTRIBUTE$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOB$
+TABLE
+
+LOGMNR_CON$
+TABLE
+
+LOGMNR_CONTAINER$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_CDEF$
+TABLE
+
+LOGMNR_CCOL$
+TABLE
+
+LOGMNR_ICOL$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_LOBFRAG$
+TABLE
+
+LOGMNR_INDPART$
+TABLE
+
+LOGMNR_INDSUBPART$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_INDCOMPART$
+TABLE
+
+LOGMNR_LOGMNR_BUILDLOG
+TABLE
+
+LOGMNR_NTAB$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_OPQTYPE$
+TABLE
+
+LOGMNR_SUBCOLTYPE$
+TABLE
+
+LOGMNR_KOPM$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_PROPS$
+TABLE
+
+LOGMNR_ENC$
+TABLE
+
+LOGMNR_REFCON$
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_IDNSEQ$
+TABLE
+
+LOGMNR_PARTOBJ$
+TABLE
+
+LOGMNRP_CTAS_PART_MAP
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGMNR_SHARD_TS
+TABLE
+
+SCHEDULER_PROGRAM_ARGS
+VIEW
+
+SCHEDULER_JOB_ARGS
+VIEW
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+SCHEDULER_PROGRAM_ARGS_TBL
+TABLE
+
+SCHEDULER_JOB_ARGS_TBL
+TABLE
+
+LOGSTDBY$PARAMETERS
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$EVENTS
+TABLE
+
+LOGSTDBY$APPLY_PROGRESS
+TABLE
+
+LOGSTDBY$APPLY_MILESTONE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SCN
+TABLE
+
+LOGSTDBY$FLASHBACK_SCN
+TABLE
+
+LOGSTDBY$PLSQL
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$SKIP_TRANSACTION
+TABLE
+
+LOGSTDBY$SKIP
+TABLE
+
+LOGSTDBY$SKIP_SUPPORT
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOGSTDBY$HISTORY
+TABLE
+
+LOGSTDBY$EDS_TABLES
+TABLE
+
+REPL_VALID_COMPAT
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+REPL_SUPPORT_MATRIX
+TABLE
+
+PRODUCT_PRIVS
+VIEW
+
+SQLPLUS_PRODUCT_PROFILE
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+PRODUCT_USER_PROFILE
+SYNONYM
+
+HELP
+TABLE
+
+CUSTOMER
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+BRANCH
+TABLE
+
+ACCOUNT
+TABLE
+
+DEPOSITOR
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+LOAN
+TABLE
+
+BORROWER
+TABLE
+
+CUSTOMER1
+TABLE
+
+
+TNAME
+--------------------------------------------------------------------------------
+TABTYPE        CLUSTERID
+------------- ----------
+BRANCH1
+TABLE
+
+
+160 rows selected.
+
+SQL>
+
+ 
+SQL> select branch_name from loan;
+
+BRANCH_NAME
+--------------------
+sbi
+sbi
+pnb
+iob
+icc
+kvb
+icici
+hdfc
+hsbc
+hsbc
+hdfc
+
+BRANCH_NAME
+--------------------
+icici
+icc
+kvb
+pnb
+
+15 rows selected.
+
+SQL> select customer_name, customer_city from customer;
+
+CUSTOMER_NAME        CUSTOMER_CITY
+-------------------- ------------------------------
+i                    a
+nidhi singh          varanasi
+neha singh           mirzapur
+nilu singh           mirzapur
+shishir singh        varanasi
+shivani              bhuj
+ayantika             bengal
+shreya               haridwar
+vivek                lala chauk
+vaibhav              prayagraj
+annu                 lucknow
+
+CUSTOMER_NAME        CUSTOMER_CITY
+-------------------- ------------------------------
+ishu                 varanasi
+divya pathak         sahajajapur
+saket                balia
+janhavi              mumbai
+ayat ibrahim khan    mumbai
+yashodhara           assam
+
+17 rows selected.
+
+SQL> select branch_name from branch where assets<5000;
+
+no rows selected
+
+SQL> select branch_name from branch where assets<500000;
+
+BRANCH_NAME
+---------------
+pnb
+icici
+
+SQL> select customer_name from customer where customer_city<> 'mumbai';
+
+CUSTOMER_NAME
+--------------------
+i
+nidhi singh
+neha singh
+nilu singh
+shishir singh
+shivani
+ayantika
+shreya
+vivek
+vaibhav
+annu
+
+CUSTOMER_NAME
+--------------------
+ishu
+divya pathak
+saket
+yashodhara
+
+15 rows selected.
+
+SQL> select loan_no from loan where amount =1000 or amount=5000;
+
+LOAN_NO
+--------------------
+10004
+10006
+
+SQL> select distinct branch_name from loan;
+
+BRANCH_NAME
+--------------------
+sbi
+pnb
+iob
+icc
+kvb
+icici
+hdfc
+hsbc
+
+8 rows selected.
+
+SQL> select all branch_name from loan;
+
+BRANCH_NAME
+--------------------
+sbi
+sbi
+pnb
+iob
+icc
+kvb
+icici
+hdfc
+hsbc
+hsbc
+hdfc
+
+BRANCH_NAME
+--------------------
+icici
+icc
+kvb
+pnb
+
+15 rows selected.
+
+SQL>
+
+
+ 
+SQL> select loan_no,branch_name,amount-1000 from loan;
+
+LOAN_NO              BRANCH_NAME          AMOUNT-1000
+-------------------- -------------------- -----------
+10001                sbi                        39000
+10002                sbi                        19000
+10003                pnb                       199000
+10004                iob                            0
+10005                icc                         9000
+10006                kvb                         4000
+10007                icici                      49000
+10008                hdfc                       28000
+10009                hsbc                        8000
+100010               hsbc                       97000
+100011               hdfc                        5000
+
+LOAN_NO              BRANCH_NAME          AMOUNT-1000
+-------------------- -------------------- -----------
+100012               icici                      59000
+100013               icc                       599000
+100014               kvb                        39000
+100015               pnb                       339000
+
+15 rows selected.
+
+SQL> select loan_no from loan where branch_name='sbi' and amount>1000;
+
+LOAN_NO
+--------------------
+10001
+10002
+
+SQL> select account_no from account where balance between 500 and 2000;
+
+ACCOUNT_NO
+----------
+1009
+
+SQL> select distinct customer_name from borrower,loan where borrower.loan_no=loan.loan_no and branch_name='sbi' order by customer_name;
+
+CUSTOMER_NAME
+--------------------
+annu
+ayantika
+nilu singh
+shivani
+shreya
+vivek
+
+6 rows selected.
+
+SQL> select distinct customer_name from depositor,account where depositor.account_no=account.account_no and branch_name='pnb' order by customer_name desc;
+
+CUSTOMER_NAME
+--------------------
+vaibhav
+shreya
+shishir singh
+nilu singh
+ishu
+annu
+
+6 rows selected.
+
+SQL>
+
+ 
+SQL> (select customer_name from depositor) union (select customer_name from borrower);
+
+CUSTOMER_NAME
+--------------------
+annu
+ayantika
+ayat
+divya pathak
+ishu
+janhavi
+neha singh
+nilu singh
+saket
+shishir singh
+shivani
+
+CUSTOMER_NAME
+--------------------
+shreya
+vaibhav
+vivek
+
+14 rows selected.
+
+SQL> select customer_name from depositor union all select customer_name from bor
+  2  rower;
+select customer_name from depositor union all select customer_name from bor
+                                                                        *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> select customer_name from depositor union all select customer_name from bor
+  2  rower;
+select customer_name from depositor union all select customer_name from bor
+                                                                        *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL>  select customer_name from depositor union all select customer_name from bor
+  2  rower
+  3  ;
+ select customer_name from depositor union all select customer_name from bor
+                                                                         *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> select customer_name from depositor union all select customer_name from borrower;
+
+CUSTOMER_NAME
+--------------------
+annu
+annu
+annu
+annu
+annu
+ayantika
+ayantika
+ayantika
+ayantika
+ayantika
+ayat
+
+CUSTOMER_NAME
+--------------------
+ayat
+ayat
+ayat
+ayat
+divya pathak
+divya pathak
+divya pathak
+divya pathak
+ishu
+ishu
+ishu
+
+CUSTOMER_NAME
+--------------------
+ishu
+ishu
+janhavi
+janhavi
+janhavi
+janhavi
+janhavi
+neha singh
+neha singh
+neha singh
+neha singh
+
+CUSTOMER_NAME
+--------------------
+neha singh
+nilu singh
+nilu singh
+nilu singh
+nilu singh
+nilu singh
+nilu singh
+saket
+saket
+saket
+saket
+
+CUSTOMER_NAME
+--------------------
+saket
+shishir singh
+shishir singh
+shishir singh
+shishir singh
+shishir singh
+shishir singh
+shivani
+shivani
+shivani
+shivani
+
+CUSTOMER_NAME
+--------------------
+shreya
+shreya
+shreya
+shreya
+shreya
+vaibhav
+vaibhav
+vaibhav
+vaibhav
+vivek
+vivek
+
+CUSTOMER_NAME
+--------------------
+vivek
+vivek
+annu
+annu
+annu
+ayantika
+ayantika
+ayantika
+ayantika
+ishu
+ishu
+
+CUSTOMER_NAME
+--------------------
+ishu
+ishu
+nilu singh
+shivani
+shivani
+shreya
+shreya
+vivek
+
+85 rows selected.
+
+ 
+SQL> (select customer_name from depositor) intersect (select customer_name from borrower);
+
+CUSTOMER_NAME
+--------------------
+annu
+ayantika
+ishu
+nilu singh
+shivani
+shreya
+vivek
+
+7 rows selected.
+
+SQL> (select customer_name from depositor) minus (select customer_name from borrower);
+
+CUSTOMER_NAME
+--------------------
+ayat
+divya pathak
+janhavi
+neha singh
+saket
+shishir singh
+vaibhav
+
+7 rows selected.
+
+SQL> select avg(balance) from account where branch_name='iob';
+
+AVG(BALANCE)
+------------
+      500000
+
+SQL> select branch_name,avg(balance) from account group by branch_name;
+
+BRANCH_NAME     AVG(BALANCE)
+--------------- ------------
+icici                 150000
+hsbc                    1000
+hdfc                   60000
+kvb                   190000
+icc                    10000
+iob                   500000
+pnb                   900000
+
+7 rows selected.
+
+SQL> select branch_name,count(distinct customer_name) from depositor,account where depositor.account_no=account.account_no group by branch_name;
+
+BRANCH_NAME     COUNT(DISTINCTCUSTOMER_NAME)
+--------------- ----------------------------
+pnb                                        6
+iob                                        7
+icc                                        9
+icici                                     11
+kvb                                        9
+hdfc                                       9
+hsbc                                       5
+
+7 rows selected.
+
+SQL> select branch_name,avg(balance) from account group by branch_name having avg(balance)>1200;
+
+BRANCH_NAME     AVG(BALANCE)
+--------------- ------------
+icici                 150000
+hdfc                   60000
+kvb                   190000
+icc                    10000
+iob                   500000
+pnb                   900000
+
+6 rows selected.
+
+ 
+SQL> select depositor.customer_name,avg(balance) from
+  2  depositor,account,customer where
+  3   depositor.account_no=account.account_no and
+  4   depositor.customer_name=customer.customer_name and
+  5  customer_city='mumbai' group by depositor.customer_name having
+  6  count(distinct depositor.account_no)>=3;
+
+CUSTOMER_NAME        AVG(BALANCE)
+-------------------- ------------
+janhavi                    110200
+
+SQL> select borrower.customer_name,avg(amount) from
+  2   borrower,loan,customer where borrower.loan_no=loan.loan_no and
+  3   borrower.customer_name=customer.customer_name and
+  4  customer_city='mumbai' group by borrower.customer_name having
+  5   count(distinct borrower.loan_no)>=2;
+
+no rows selected
+
+SQL> select borrower.customer_name,avg(amount) from
+  2   borrower,loan,customer where borrower.loan_no=loan.loan_no and
+  3  borrower.customer_name=customer.customer_name and
+  4  customer_city='varanasi' group by borrower.customer_name having
+  5  count(distinct borrower.loan_no)>=2;
+
+CUSTOMER_NAME        AVG(AMOUNT)
+-------------------- -----------
+ishu                       23500
+
+SQL>
+
+SQL> select customer_name from customer where customer_city in ('chennai','mumbai');
+
+CUSTOMER_NAME
+--------------------
+janhavi
+ayat ibrahim khan
+
+SQL> select account_no from accounts where balance between 1000 and 5000;
+select account_no from accounts where balance between 1000 and 5000
+                       *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL>  select account_no from account where balance between 1000 and 5000;
+
+ACCOUNT_NO
+----------
+1009
+
+SQL> select account_no from accounts where balance not between 1000 and 5000;
+select account_no from accounts where balance not between 1000 and 5000
+                       *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> select account_no from account where balance not between 1000 and 5000;
+
+ACCOUNT_NO
+----------
+1010
+1008
+1007
+1006
+1005
+1004
+1003
+
+7 rows selected.
+
+SQL> select distinct customer_name from borrower where customer_name in (select customer_name from depositor);
+
+CUSTOMER_NAME
+--------------------
+annu
+ayantika
+ishu
+nilu singh
+shivani
+shreya
+vivek
+
+7 rows selected.
+
+SQL>
+ 
+SQL> create view allcustomer as(select branch_name,customer_name from
+  2  depositor,account where depositor.account_no=account.account_no)
+  3  union(select branch_name,customer_name from borrower,loan where
+  4  borrower.loan_no=loan.loan_no);
+
+View created.
+
+SQL> create view brtot(branch_name,totloan)as select
+  2  branch_name,sum(amount)from loan group by branch_name;
+
+View created.
+
+SQL>  select a.account_no,v.loan_no,v.amount-a.balance from account a,(select dis
+  2  tinct l.loan_no,l.amount from loan l) v
+  3  where a.account_no=v.loan_nogroup by rollup (a.account_no,v.loan_no,v.amount-a.balance);
+tinct l.loan_no,l.amount from loan l) v
+      *
+ERROR at line 2:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL>  select a.account_no,v.loan_no,v.amount-a.balance from account a,(select distinct l.loan_no,l.amount from loan l) v
+  2  where a.account_no=v.loan_no
+  3  group by rollup (a.account_no,v.loan_no,v.amount-a.balance);
+
+no rows selected
+
+SQL>  select balance from account;
+
+   BALANCE
+----------
+    100000
+      1000
+     60000
+    200000
+    190000
+     10000
+    500000
+    900000
+
+8 rows selected.
+
+SQL> update account set balance=balance-100;
+
+8 rows updated.
+
+SQL> select balance from account;
+
+   BALANCE
+----------
+     99900
+       900
+     59900
+    199900
+    189900
+      9900
+    499900
+    899900
+
+8 rows selected.
+
+SQL>  update account set balance=balance*1.05
+  2  where balance>=1000;
+
+7 rows updated.
+
+SQL> select balance from account;
+
+   BALANCE
+----------
+    104895
+       900
+     62895
+    209895
+    199395
+     10395
+    524895
+    944895
+
+8 rows selected.
+
+SQL> update account set balance=balance*1.06
+  2  where balance>(select avg(balance) from account);
+
+2 rows updated.
+
+SQL> select balance from account;
+
+   BALANCE
+----------
+    104895
+       900
+     62895
+    209895
+    199395
+     10395
+  556388.7
+ 1001588.7
+
+8 rows selected.
+
+SQL> select * from account;
+
+ACCOUNT_NO BRANCH_NAME        BALANCE
+---------- --------------- ----------
+1010       icici               104895
+1009       hsbc                   900
+1008       hdfc                 62895
+1007       icici               209895
+1006       kvb                 199395
+1005       icc                  10395
+1004       iob               556388.7
+1003       pnb              1001588.7
+
+8 rows selected.
+
+SQL> update account set balance=case
+  2  when balance<=1000 then
+  3  balance*1.05 when balance>=1000 and balance<=2000 then balance *1.10 when balance >2000 then balance*3 else balance*1.01 end;
+
+8 rows updated.
+
+SQL> select *from account;
+
+ACCOUNT_NO BRANCH_NAME        BALANCE
+---------- --------------- ----------
+1010       icici               314685
+1009       hsbc                   945
+1008       hdfc                188685
+1007       icici               629685
+1006       kvb                 598185
+1005       icc                  31185
+1004       iob              1669166.1
+1003       pnb              3004766.1
+
+8 rows selected.
+
+SQL>  select account_no,balance,branch.branch_name,branch_city,assets from account,branch;
+
+ACCOUNT_NO    BALANCE BRANCH_NAME     BRANCH_CITY                        ASSETS
+---------- ---------- --------------- ------------------------------ ----------
+1010           314685 pnb             mirzapur                            50000
+1009              945 pnb             mirzapur                            50000
+1008           188685 pnb             mirzapur                            50000
+1007           629685 pnb             mirzapur                            50000
+1006           598185 pnb             mirzapur                            50000
+1005            31185 pnb             mirzapur                            50000
+1004        1669166.1 pnb             mirzapur                            50000
+1003        3004766.1 pnb             mirzapur                            50000
+1010           314685 iob             mumbai                            5000000
+1009              945 iob             mumbai                            5000000
+1008           188685 iob             mumbai                            5000000
+
+ACCOUNT_NO    BALANCE BRANCH_NAME     BRANCH_CITY                        ASSETS
+---------- ---------- --------------- ------------------------------ ----------
+1007           629685 iob             mumbai                            5000000
+1006           598185 iob             mumbai                            5000000
+1005            31185 iob             mumbai                            5000000
+1004        1669166.1 iob             mumbai                            5000000
+1003        3004766.1 iob             mumbai                            5000000
+1010           314685 icc             sahajahapur                        960000
+1009              945 icc             sahajahapur                        960000
+1008           188685 icc             sahajahapur                        960000
+1007           629685 icc             sahajahapur                        960000
+1006           598185 icc             sahajahapur                        960000
+1005            31185 icc             sahajahapur                        960000
+
+ACCOUNT_NO    BALANCE BRANCH_NAME     BRANCH_CITY                        ASSETS
+---------- ---------- --------------- ------------------------------ ----------
+1004        1669166.1 icc             sahajahapur                        960000
+1003        3004766.1 icc             sahajahapur                        960000
+1010           314685 kvb             bengal                            9060000
+1009              945 kvb             bengal                            9060000
+1008           188685 kvb             bengal                            9060000
+1007           629685 kvb             bengal                            9060000
+1006           598185 kvb             bengal                            9060000
+1005            31185 kvb             bengal                            9060000
+1004        1669166.1 kvb             bengal                            9060000
+1003        3004766.1 kvb             bengal                            9060000
+1010           314685 icici           haridwar                            60000
+
+ACCOUNT_NO    BALANCE BRANCH_NAME     BRANCH_CITY                        ASSETS
+---------- ---------- --------------- ------------------------------ ----------
+1009              945 icici           haridwar                            60000
+1008           188685 icici           haridwar                            60000
+1007           629685 icici           haridwar                            60000
+1006           598185 icici           haridwar                            60000
+1005            31185 icici           haridwar                            60000
+1004        1669166.1 icici           haridwar                            60000
+1003        3004766.1 icici           haridwar                            60000
+1010           314685 hdfc            varanasi                           800000
+1009              945 hdfc            varanasi                           800000
+1008           188685 hdfc            varanasi                           800000
+1007           629685 hdfc            varanasi                           800000
+
+ACCOUNT_NO    BALANCE BRANCH_NAME     BRANCH_CITY                        ASSETS
+---------- ---------- --------------- ------------------------------ ----------
+1006           598185 hdfc            varanasi                           800000
+1005            31185 hdfc            varanasi                           800000
+1004        1669166.1 hdfc            varanasi                           800000
+1003        3004766.1 hdfc            varanasi                           800000
+1010           314685 hsbc            bhuj                              8000000
+1009              945 hsbc            bhuj                              8000000
+1008           188685 hsbc            bhuj                              8000000
+1007           629685 hsbc            bhuj                              8000000
+1006           598185 hsbc            bhuj                              8000000
+1005            31185 hsbc            bhuj                              8000000
+1004        1669166.1 hsbc            bhuj                              8000000
+
+ACCOUNT_NO    BALANCE BRANCH_NAME     BRANCH_CITY                        ASSETS
+---------- ---------- --------------- ------------------------------ ----------
+1003        3004766.1 hsbc            bhuj                              8000000
+
+56 rows selected.
+
+SQL> select * from account;
+
+ACCOUNT_NO BRANCH_NAME        BALANCE
+---------- --------------- ----------
+1010       icici               314685
+1009       hsbc                   945
+1008       hdfc                188685
+1007       icici               629685
+1006       kvb                 598185
+1005       icc                  31185
+1004       iob              1669166.1
+1003       pnb              3004766.1
+
+8 rows selected.
+
+SQL> insert into account values('17','icici',120000);
+
+1 row created.
+
+SQL> select * from account;
+
+ACCOUNT_NO BRANCH_NAME        BALANCE
+---------- --------------- ----------
+1010       icici               314685
+1009       hsbc                   945
+1008       hdfc                188685
+1007       icici               629685
+1006       kvb                 598185
+1005       icc                  31185
+1004       iob              1669166.1
+1003       pnb              3004766.1
+17         icici               120000
+
+9 rows selected.
+
+SQL> select *from branch;
+
+BRANCH_NAME     BRANCH_CITY                        ASSETS
+--------------- ------------------------------ ----------
+pnb             mirzapur                            50000
+iob             mumbai                            5000000
+icc             sahajahapur                        960000
+kvb             bengal                            9060000
+icici           haridwar                            60000
+hdfc            varanasi                           800000
+hsbc            bhuj                              8000000
+
+7 rows selected.
+
+SQL>  insert into branch values('icici','chennai',12344);
+ insert into branch values('icici','chennai',12344)
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SYSTEM.SYS_C008317) violated
+
+
+SQL> select a.account_no,a.branch_name,b.branch_name,b.branch_city from accountSQL>
+SQL>  select a.account_no,a.branch_name,b.branch_name,b.branch_city from account a, branch b where a.branch_name=b.branch_name;
+
+ACCOUNT_NO BRANCH_NAME     BRANCH_NAME     BRANCH_CITY
+---------- --------------- --------------- ------------------------------
+1010       icici           icici           haridwar
+1009       hsbc            hsbc            bhuj
+1008       hdfc            hdfc            varanasi
+1007       icici           icici           haridwar
+1006       kvb             kvb             bengal
+1005       icc             icc             sahajahapur
+1004       iob             iob             mumbai
+1003       pnb             pnb             mirzapur
+17         icici           icici           haridwar
+
+9 rows selected.
+
+SQL>  select a.account_no,a.branch_name,b.branch_name,b.branch_city
+  2   from account a,branch b
+  3  where a.branch_name(+)=b.branch_name;
+
+ACCOUNT_NO BRANCH_NAME     BRANCH_NAME     BRANCH_CITY
+---------- --------------- --------------- ------------------------------
+1010       icici           icici           haridwar
+1009       hsbc            hsbc            bhuj
+1008       hdfc            hdfc            varanasi
+1007       icici           icici           haridwar
+1006       kvb             kvb             bengal
+1005       icc             icc             sahajahapur
+1004       iob             iob             mumbai
+1003       pnb             pnb             mirzapur
+17         icici           icici           haridwar
+
+9 rows selected.
+
+SQL> select a.account_no,a.branch_name,b.branch_name,b.branch_city
+  2  from account a,branch b
+  3  where a.branch_name=b.branch_name (+);
+
+ACCOUNT_NO BRANCH_NAME     BRANCH_NAME     BRANCH_CITY
+---------- --------------- --------------- ------------------------------
+1003       pnb             pnb             mirzapur
+1004       iob             iob             mumbai
+1005       icc             icc             sahajahapur
+1006       kvb             kvb             bengal
+1010       icici           icici           haridwar
+1007       icici           icici           haridwar
+17         icici           icici           haridwar
+1008       hdfc            hdfc            varanasi
+1009       hsbc            hsbc            bhuj
+
+9 rows selected.
+
+SQL> alter table account add constraint acbr foreign key(branch_name)
+  2  references branch(branch_name) deferrable initially immediate;
+alter table account add constraint acbr foreign key(branch_name)
+                                        *
+ERROR at line 1:
+ORA-02275: such a referential constraint already exists in the table
+
+
+SQL> alter table loan add constraint lobr foreign key(branch_name)
+  2  references branch(branch_name) deferrable initially deferred;
+alter table loan add constraint lobr foreign key(branch_name)
+                                *
+ERROR at line 1:
+ORA-02298: cannot validate (SYSTEM.LOBR) - parent keys not found
+
+
+SQL> alter table loan add constraint lobr foreign key(branch_name)
+  2  references branch(branch_name) deferrable initially deferred;
+alter table loan add constraint lobr foreign key(branch_name)
+                                *
+ERROR at line 1:
+ORA-02298: cannot validate (SYSTEM.LOBR) - parent keys not found
+
+
+SQL>  alter table loan add constraint lobr foreign key(branch_name)
+  2  references branch(branch_name)deferrable initially deferred;
+ alter table loan add constraint lobr foreign key(branch_name)
+                                 *
+ERROR at line 1:
+ORA-02298: cannot validate (SYSTEM.LOBR) - parent keys not found
+
+
+SQL>  alter table loan add constraint acbr foreign key(branch_name)
+  2  references branch(branch_name)deferrable initially deferred;
+ alter table loan add constraint acbr foreign key(branch_name)
+                                 *
+ERROR at line 1:
+ORA-02298: cannot validate (SYSTEM.ACBR) - parent keys not found
+
+
+SQL>  alter table loan add constraint loan_branch foreign key(branch_name)
+  2  references branch(branch_name)deferrable initially deferred;
+ alter table loan add constraint loan_branch foreign key(branch_name)
+                                 *
+ERROR at line 1:
+ORA-02298: cannot validate (SYSTEM.LOAN_BRANCH) - parent keys not found
+
+
+SQL> alter session set constraint=immediate;
+
+Session altered.
+
+SQL> alter session set constraint=deferred;
+
+Session altered.
+
+SQL> alter table account modify constraint acbr enable validate;
+alter table account modify constraint acbr enable validate
+*
+ERROR at line 1:
+ORA-02430: cannot enable constraint (ACBR) - no such constraint
+
+
+SQL> alter table loan modify constraint lobr enable novalidate;
+alter table loan modify constraint lobr enable novalidate
+*
+ERROR at line 1:
+ORA-02430: cannot enable constraint (LOBR) - no such constraint
+
+
+SQL>  alter table account modify constraint acbr disable novalidate;
+ alter table account modify constraint acbr disable novalidate
+*
+ERROR at line 1:
+ORA-02431: cannot disable constraint (ACBR) - no such constraint
+
+
+SQL>  alter table account drop constraint acbr;
+ alter table account drop constraint acbr
+                                     *
+ERROR at line 1:
+ORA-02443: Cannot drop constraint  - nonexistent constraint
+
+
+SQL> alter table loan drop constraint lobr;
+alter table loan drop constraint lobr
+                                 *
+ERROR at line 1:
+ORA-02443: Cannot drop constraint  - nonexistent constraint
+ 
